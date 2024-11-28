@@ -55,11 +55,34 @@
             </div>
         </div>
         <div id="right-main">
-            <img src="static/images/bolt-up-left.png" alt="">
-            <img src="./static/images/bolt-down-left.png" alt="">
-            <img src="static/images/bolt-up-right.png" alt="">
-            <img src="static/images/bolt-down-right.png" alt="">
-
+            <img class="screws" id="bolt-up-left" src="static/images/bolt-up-left.png" alt="">
+            <img class="screws" id="bolt-down-left" src="./static/images/bolt-down-left.png" alt="">
+            <img class="screws" id="bolt-up-right" src="static/images/bolt-up-right.png" alt="">
+            <img class="screws" id="bolt-down-right" src="static/images/bolt-down-right.png" alt="">
+            <div id="right-main-container">
+                <div id="left-right-main">
+                    <div id="game-display">
+                        <!-- <canvas id="game-canvas"></canvas> -->
+                        <button>start-game</button>
+                    </div>
+                </div>
+                <div id="right-right-main">
+                    <div id="guides-container">
+                        <div class="right-main-text">// use keyboard</div>
+                        <div class="right-main-text">// arrows to play</div>
+                        <div id="arrows-container">
+                            <button style="grid-column: 2; grid-row: 1;"><img src="static/images/up-arrow.png" alt=""></button>
+                            <button style="grid-column: 1; grid-row: 2;"><img src="static/images/left-arrow.png" alt=""></button>
+                            <button style="grid-column: 2; grid-row: 2;"><img src="static/images/down-arrow.png" alt=""></button>
+                            <button style="grid-column: 3; grid-row: 2;"><img src="static/images/right-arrow.png" alt=""></button>
+                        </div>
+                    </div>
+                    <div>
+                
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </main>
     <footer>
@@ -67,7 +90,7 @@
             <div class="footer-items-container">
                 <div class="footer-text">find me in:</div>
             </div>
-            <a class="footer-items-container" href="">
+            <a class="footer-items-container" href="https://www.facebook.com/profile.php?id=100050729044921">
                 <div class="footer-text" style="display: flex; justify-content: center; align-items: center;">
                     <img src="./static/icons/facebook-icon.svg" alt="">
                 </div>
