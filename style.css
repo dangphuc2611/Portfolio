@@ -34,7 +34,7 @@ header {
   position: relative;
   display: flex;
   justify-content: space-between;
-  height: 2.8125em;
+  height: 4.5vh;
   border-bottom: solid 0.03125em var(--border-color);
 }
 
@@ -58,6 +58,7 @@ header {
   text-decoration: none;
   margin-left: 2.5em;
   margin-right: 2.5em;
+  font-size: 2.272729vh;
 }
 
 .header-items-container {
@@ -207,8 +208,8 @@ main {
   justify-content: center; 
   align-items: center; 
   background-color: #FEA55F; 
-  width: 112px;
-  height: 38px;
+  width: 18vh;
+  height: 6vh;
   border: none;
   border-radius: 10%;
   padding: 0%;
@@ -273,7 +274,7 @@ footer {
   z-index: 0;
 }
 
-@media screen and (max-width: 63.9375em) {
+@media screen and (max-width: 64em) {
 
   #hello,
   #about-me,
@@ -331,7 +332,7 @@ footer {
     align-items: center;
     margin-top: auto;
     margin-bottom: auto;
-    padding: 30px;
+    padding: 1.5625vw;
   }
 }
 
