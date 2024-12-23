@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Game</title>
+  <style>
+    /* CSS cho giao diện */
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #111;
+      flex-direction: column;
+    }
+
+    #gameContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 400px;
+      height: 400px;
+      background-color: rgba(1, 22, 39, 0.84);
+      border-radius: 5%;
+      position: relative;
+    }
+
+    #startButton {
+      padding: 10px 20px;
+      font-size: 18px;
+      color: #fff;
+      background-color: orange;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #startButton:hover {
+      background-color: darkorange;
+    }
+
+    canvas {
+      display: block;
+      width: 400px;
+      height: 400px;
+      background-color: rgba(1, 22, 39, 0.84);
+      border-radius: 5%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Ban đầu là thẻ div chứa nút start -->
+  <div id="gameContainer">
+    <button id="startButton">start-game</button>
+  </div>
+
+  <script>
+    const gameContainer = document.getElementById("gameContainer");
+    const startButton = document.getElementById("startButton");
+
+    // Xử lý khi nhấn nút Start
+    startButton.addEventListener("click", () => {
+      // Tạo thẻ canvas mới
+      const canvas = document.createElement("canvas");
+      canvas.id = "gameCanvas";
+      canvas.width = 400;
+      canvas.height = 400;
+
+      // Thay thế thẻ div bằng thẻ canvas
+      gameContainer.replaceWith(canvas);
+
+      // Bắt đầu game
+      startGame(canvas);
+    });
+
+    // Hàm khởi động trò chơi rắn
+    function startGame(canvas) {
+      const ctx = canvas.getContext("2d");
+      let snake = [{ x: 10, y: 10 }];
+      let direction = { x: 0, y: 0 };
+      let food = { x: 15, y: 15 };
+      const cellSize = 20;
+      const rows = canvas.height / cellSize;
+      const cols = canvas.width / cellSize;
+      let gameOver = false;
+
+      // Vẽ ô vuông
+      function drawCell(x, y, color) {
+        ctx.fillStyle = color;
+        ctx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
+      }
+
+      // Vẽ rắn và thức ăn
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawCell(food.x, food.y, "red");
+        snake.forEach((segment, index) => {
+          drawCell(segment.x, segment.y, index === 0 ? "limegreen" : "green");
+        });
+      }
+
+      // Cập nhật trạng thái rắn
+      function update() {
+        if (gameOver) return;
+
+        const head = { x: snake[0].x + direction.x, y: snake[0].y + direction.y };
+        snake.unshift(head);
+
+        if (head.x === food.x && head.y === food.y) {
+          food = {
+            x: Math.floor(Math.random() * cols),
+            y: Math.floor(Math.random() * rows)
+          };
+        } else {
+          snake.pop();
+        }
+
+        // Kiểm tra va chạm tường
+        if (head.x < 0 || head.x >= cols || head.y < 0 || head.y >= rows) {
+          gameOver = true;
+          alert("Game Over! Reload để chơi lại.");
+        }
+
+        // Kiểm tra va chạm chính mình
+        for (let i = 1; i < snake.length; i++) {
+          if (head.x === snake[i].x && head.y === snake[i].y) {
+            gameOver = true;
+            alert("Game Over! Reload để chơi lại.");
+          }
+        }
+      }
+
+      // Điều khiển rắn
+      window.addEventListener("keydown", (e) => {
+        switch (e.key) {
+          case "ArrowUp":
+            if (direction.y === 0) direction = { x: 0, y: -1 };
+            break;
+          case "ArrowDown":
+            if (direction.y === 0) direction = { x: 0, y: 1 };
+            break;
+          case "ArrowLeft":
+            if (direction.x === 0) direction = { x: -1, y: 0 };
+            break;
+          case "ArrowRight":
+            if (direction.x === 0) direction = { x: 1, y: 0 };
+            break;
+        }
+      });
+
+      // Vòng lặp trò chơi
+      function gameLoop() {
+        update();
+        draw();
+        if (!gameOver) {
+          setTimeout(gameLoop, 150);
+        }
+      }
+
+      gameLoop();
+    }
+  </script>
+</body>
+</html>

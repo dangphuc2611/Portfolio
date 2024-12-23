@@ -34,7 +34,7 @@ header {
   position: relative;
   display: flex;
   justify-content: space-between;
-  height: 4.5vh;
+  height: 50px;
   border-bottom: solid 0.03125em var(--border-color);
 }
 
@@ -58,8 +58,11 @@ header {
   text-decoration: none;
   margin-left: 2.5em;
   margin-right: 2.5em;
-  font-size: 2.272729vh;
+  /* font-size: 2.272729vh; */
+  font-size: 1.04712vw;
+  /* font-size: 16px; */
 }
+
 
 .header-items-container {
   display: flex;
@@ -184,7 +187,7 @@ main {
   width: 55%;
 }
 
-#game-display {
+#gameCanvas {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   /* grid-template-rows: ; */
@@ -203,7 +206,7 @@ main {
   grid-row: 1;
 } */
 
-#game-display > button {
+#gameCanvas > button {
   display: flex; 
   justify-content: center; 
   align-items: center; 
@@ -274,7 +277,21 @@ footer {
   z-index: 0;
 }
 
+#line-1{color: white; font-size: 1.17801vw;}
+  #line-2{color: white; font-size: 3.53403vw;}
+  #line-3{color: #4b5bce; font-size: 2.094244vw;}
+  #line-4, #line-5, #line-6{color: #607B96; font-size: 1.04712vw;}
+
 @media screen and (max-width: 64em) {
+  .header-text {
+    font-size: 2.272729vh;
+  }
+
+#line-1{color: white; font-size: 2.55682vh;}
+#line-2{color: white; font-size: 7.67045vh;}
+#line-3{color: #4b5bce; font-size: 4.54546vh;}
+#line-4, #line-5, #line-6{color: #607B96; font-size: 2.272729vh;}
+  
 
   #hello,
   #about-me,
@@ -332,7 +349,6 @@ footer {
     align-items: center;
     margin-top: auto;
     margin-bottom: auto;
-    padding: 1.5625vw;
   }
 }
 
