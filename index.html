@@ -16,9 +16,9 @@
     <header>
         <div id="left-header">
             <div class="header-items-container" id="name">
-                <div style="margin-right: 120px ;" class="header-text">nguyen-dang-phuc</div>
+                <div style="margin-right: 100px ;" class="header-text">nguyen-dang-phuc</div>
             </div>
-            <a href="" class="header-items-container" id="hello">
+            <a href="https://dangphuc.site" class="header-items-container" id="hello" style="border-bottom: solid 3px #FEA55F;">
                 <div class="header-text">_hello</div>
             </a>
             <a href="" class="header-items-container" id="about-me">
@@ -29,8 +29,8 @@
             </a>
         </div>
         <div id="right-header">
-            <a href="" class="header-items-container">
-                <div class="header-text" id="contact-me">_contact-me</div>
+            <a href="" class="header-items-container" id="contact-me">
+                <div class="header-text">_contact-me</div>
             </a>
             <button id="header-btn" class="header-items-container">
                 <img src="./static/icons/menu-icon.svg" alt="">
@@ -46,12 +46,11 @@
             </div>
             <div class="main-text" id="line-5" style="color: #607B96;">// you can also see it on my
                 Github page</div>
-            <div class="main-text" id="line-6" style="color: white;" >
+            <div class="main-text" id="line-6" style="color: white;">
                 <span style="color: #4b5bce;">const</span>
                 <span style="color: #43D93D;"> githubLink </span>
                 <span>=</span>
-                <a style="color: #E99287;"
-                    href="https://github.com/dangphuc2611">"https://github.com/dangphuc2611"</a>
+                <a style="color: #E99287;" href="https://github.com/dangphuc2611">"https://github.com/dangphuc2611"</a>
             </div>
             <!-- <div class="main-text" id="line-1" style="color: white; font-size: 1.17801vw;">Hi all. I am</div>
             <div class="main-text" id="line-2" style="color: white; font-size: 3.53403vw;">Nguyen Dang Phuc</div>
@@ -75,27 +74,32 @@
             <img class="screws" id="bolt-down-right" src="static/images/bolt-down-right.png" alt="">
             <div id="right-main-container">
                 <div id="left-right-main">
-                     <div id="gameCanvas">
-                        <img style="width: 50%; grid-column: 2; grid-row: 2; margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom: auto;" src="static/images/Snake.png" alt="">
+                    <div id="gameCanvas">
+                        <img style="width: 50%; grid-column: 2; grid-row: 2; margin-left: auto; margin-right: auto; margin-top: auto; margin-bottom: auto;"
+                            src="static/images/Snake.png" alt="">
                         <button onclick="startBtn()" id="startButton">start-game</button>
-                     </div>
+                    </div>
                 </div>
                 <div id="right-right-main">
                     <div id="guides-container">
                         <div class="right-main-text">// use keyboard</div>
                         <div class="right-main-text">// arrows to play</div>
                         <div id="arrows-container">
-                            <button style="grid-column: 2; grid-row: 1;"><img src="static/images/up-arrow.png" alt=""></button>
-                            <button style="grid-column: 1; grid-row: 2;"><img src="static/images/left-arrow.png" alt=""></button>
-                            <button style="grid-column: 2; grid-row: 2;"><img src="static/images/down-arrow.png" alt=""></button>
-                            <button style="grid-column: 3; grid-row: 2;"><img src="static/images/right-arrow.png" alt=""></button>
+                            <button style="grid-column: 2; grid-row: 1;"><img src="static/images/up-arrow.png"
+                                    alt=""></button>
+                            <button style="grid-column: 1; grid-row: 2;"><img src="static/images/left-arrow.png"
+                                    alt=""></button>
+                            <button style="grid-column: 2; grid-row: 2;"><img src="static/images/down-arrow.png"
+                                    alt=""></button>
+                            <button style="grid-column: 3; grid-row: 2;"><img src="static/images/right-arrow.png"
+                                    alt=""></button>
                         </div>
                     </div>
                     <div>
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </main>
     <footer>
@@ -110,7 +114,7 @@
             </a>
         </div>
         <div id="right-footer">
-            <a class="footer-items-container" href="">
+            <a class="footer-items-container" href="https://github.com/dangphuc2611">
                 <span style="display: flex; justify-content: space-between;" class="footer-text">
                     <div>@username</div>
                     <img style="margin-left: 10px;" src="./static/icons/github-icon.svg" alt="">
@@ -121,29 +125,37 @@
     </footer>
     <div id="overlay"></div>
     <div id="drop-menu">
-        <div href="">
-            <div>nguyen-dang-phuc</div>
-            <button>x</button>
-        </div>
-        <a href="">
-            <div>_hello</div>
-        </a>
-        <a href="">
-            <div>_about-me</div>
-        </a>
-        <a href="">
-            <div>_about-me</div>
-        </a>
-        <a href="">
-            <div>_projects</div>
-        </a>
         <div>
-            <div></div>
-            <a href=""></a>
-            <a href=""></a>
+            <div class="menu-items-container" id="name-container">
+                <div class="menu-texts" id="menu-name">nguyen-dang-phuc</div>
+                <button id="close-btn"><img src="static/images/Vector.png" alt="" srcset=""></button>
+            </div>
+            <a id="hello-container" class="menu-items-container" href="https://dangphuc.site">
+                <div class="menu-texts" id="menu-hello">_hello</div>
+            </a>
+            <a href="" class="menu-items-container" id="about-me-container">
+                <div class="menu-texts" id="menu-about-me">_about-me</div>
+            </a>
+            <a href="" class="menu-items-container" id="projects-container">
+                <div class="menu-texts" id="menu-projects">_projects</div>
+            </a>
+            <a href="" class="menu-items-container" id="contact-me-container">
+                <div class="menu-texts" id="menu-contact-me">_contact-me</div>
+            </a>
+        </div>
+        <div id="footer-menu">
+            <div class="menu-items-container" id="find-me-in-container">
+                <span id="menu-find-me-in" class="menu-texts">find me in:</span>
+                <div style="height: 100%; display: flex; align-items: center;">
+                    <a id="menu-facebook-icon" href=""><img src="./static/icons/facebook-icon.svg" alt=""></a>
+                    <a id="menu-github-icon" href=""><img src="./static/icons/github-icon.svg" alt=""></a>
+                </div>
+
+            </div>
         </div>
     </div>
-    <img id="background-blurs" src="./static/images/background-blurs.png" alt="">
+    <img id="background-blurs" src="./static/images/background-blurs.png" alt="" style="z-index: -100;">
     <script src="script.js"></script>
 </body>
+
 </html>

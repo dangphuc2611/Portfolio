@@ -233,5 +233,41 @@ function draw() {
     gameLoop();
 }
 
+// let headerBtn = document.getElementById("header-btn");
+// headerBtn.addEventListener("click", () => {
+//     document.getElementById("overlay").style.display = "block"
+//     document.getElementById("drop-menu").style.display = "flex"
+// });
+// let closeBtn = document.getElementById("close-btn");
+// closeBtn.addEventListener("click", () => {
+//     document.getElementById("overlay").style.display = "none"
+//     document.getElementById("drop-menu").style.display = "none"
+// });
 
+
+// Lấy các phần tử
+const headerBtn = document.getElementById("header-btn");
+const closeBtn = document.getElementById("close-btn");
+const overlay = document.getElementById("overlay");
+const dropMenu = document.getElementById("drop-menu");
+
+// Hiển thị menu và overlay
+headerBtn.addEventListener("click", () => {
+    overlay.classList.add("active");
+    dropMenu.classList.add("active");
+    document.getElementById("overlay").style.display = "block"
+});
+
+// Đóng menu và overlay
+closeBtn.addEventListener("click", () => {
+    overlay.classList.remove("active");
+    dropMenu.classList.remove("active");
+     document.getElementById("overlay").style.display = "none"
+});
+
+overlay.addEventListener("click", () => {
+    overlay.classList.remove("active");
+    dropMenu.classList.remove("active");
+     document.getElementById("overlay").style.display = "none"
+});
 
