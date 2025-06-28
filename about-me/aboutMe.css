@@ -186,7 +186,7 @@ header {
   height: calc(100% - 50px);
 }
 
-#tab-editor {
+.tab-editor {
   width: 100%;
   height: 40px;
   border-bottom: var(--border-color) solid 0.5px;
@@ -204,11 +204,129 @@ header {
 }
 
 #tab-display {
+  padding: 20px;
   width: 100%;
   height: calc(100% - 90px);
+  overflow-y: auto;
+  overflow-x: auto;
 }
 
 #contact-info > a {
   display: flex;
   align-items: center;
+}
+
+#tabs-container {
+  display: flex;
+}
+
+.tabs-container {
+  width: 50%;
+}
+
+/* pre {
+  background: #303030;
+  padding: 10px 16px;
+  color: var(--text-color);
+  counter-reset: line 1;
+}
+
+pre>span::before {
+  content: '1';
+  display: inline-block;
+  padding: 0 .5em;
+  margin-right: .5em;
+  color: #888;
+}
+
+pre div {
+  line-height: 1.5;
+  counter-increment: line;
+}
+
+pre div::before {
+  content: counter(line);
+  display: inline-block;
+  padding: 0 .5em;
+  margin-right: .5em;
+  color: #888;
+} */
+
+.code-box {
+  background-color: #0f172a;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #1e293b;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  white-space: pre;
+  counter-reset: line;
+}
+
+.code-line {
+  position: relative;
+  padding-left: 3em;
+  counter-increment: line;
+}
+
+.code-line::before {
+  content: counter(line);
+  position: absolute;
+  left: 0;
+  width: 2em;
+  text-align: right;
+  color: #64748b;
+  user-select: none;
+}
+
+#tab-display::-webkit-scrollbar {
+  height: 100%;
+  width: 10px;
+  /* background: #0f172a; */
+}
+
+#tab-display::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  margin: 10px;
+}
+
+#tab-display::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Optional: Hide scrollbar track border */
+#tab-display::-webkit-scrollbar-track {
+  /* background: #0f172a; */
+  border-left: solid 1px var(--border-color);
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.code-snippet {
+  width: 90%;
+}
+
+.code-snippet-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.code-snippet-header-left {
+  display: flex;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-info > #username {
+  color: #5565E8;
+  font-weight: bold;
 }

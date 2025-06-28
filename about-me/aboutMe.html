@@ -46,7 +46,7 @@
                                     src="about-me-icon/drop-down-arrow.png" alt=""><img class="icon"
                                     src="about-me-icon/blue-folder.png" alt="">education</a></div>
                         <li class="explorer-item"><a href=""><img class="icon" src="about-me-icon/file-icon.png"
-                                    alt="">high-school</a></li>
+                                    alt="">FPT-high-school</a></li>
                         <li class="explorer-item"><a href=""><img class="icon" src="about-me-icon/file-icon.png"
                                     alt="">university</a></li>
                     </ul>
@@ -90,21 +90,58 @@
             </div>
         </header>
         <div id="tabs-container">
-            <div>
-                <div id="tab-editor">
-
+            <div id="left-tabs-container" class="tabs-container">
+                <div class="tab-editor">
+                    <div style="display: flex; align-items: center; height: 100%; border-right: solid var(--border-color) 0.5px; padding: 5px 10px;">
+                        <p style="margin-right: 50px;">personal-info</p>
+                        <button style="display: flex; align-items: center;">
+                            <img src="/static/icons/close-icon.png" alt="">
+                        </button>
+                    </div>
                 </div>
                 <div id="tab-display">
-
+<!-- <pre contenteditable="true" spellcheck="false"><span>/**
+</span></pre> -->
+                    <div class="code-line comment">/**</div>
+                    <div class="code-line comment"> * About me</div>
+                    <div class="code-line comment"> * I have 5 years of experience in web</div>
+                    <div class="code-line comment"> * development lorem ipsum dolor sit amet,</div>
+                    <div class="code-line comment"> * consectetur adipiscing elit, sed do eiusmod</div>
+                    <div class="code-line comment"> * tempor incididunt ut labore et dolore</div>
+                    <div class="code-line comment"> * magna aliqua. Ut enim ad minim veniam,</div>
+                    <div class="code-line comment"> * quis nostrud exercitation ullamco laboris</div>
+                    <div class="code-line comment"> * nisi ut aliquip ex ea commodo consequat.</div>
+                    <div class="code-line comment"> * Duis aute irure dolor in reprehenderit in</div>
+                    <div class="code-line comment"> *</div>
+                    <div class="code-line comment"> * Duis aute irure dolor in reprehenderit in</div>
+                    <div class="code-line comment"> * voluptate velit esse cillum dolore eu fugiat</div>
+                    <div class="code-line comment"> * nulla pariatur. Excepteur sint occaecat</div>
+                    <div class="code-line comment"> * officia deserunt mollit anim id est laborum.</div>
+                    <div class="code-line comment"> */</div>
+                    <div style="height: 500px;"></div>
                 </div>
             </div>
             
-            <div>
-                <div id="tab-editor">
-
+            <div id="right-tabs-container" class="tabs-container" style="border-left: var(--border-color) solid 0.5px;">
+                <div class="tab-editor">
+                    
                 </div>
                 <div id="tab-display">
-
+                    <div>// code snippet showcase:</div>
+                    <div class="code-snippet">
+                        <div class="code-snippet-header">
+                            <div class="code-snippet-header-left">
+                                <img class="avatar" src="../static/images/avatar.jpg" alt="">
+                                <div class="header-info">
+                                    <span id="username">@username</span>
+                                    <span>Created 5 month ago</span>
+                                </div>
+                            </div>
+                            <div class="code-snippet-header-right">
+                                abc
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
