@@ -310,7 +310,8 @@ pre div::before {
 }
 
 .code-snippet {
-  width: 90%;
+  width: 100%;
+  margin-bottom: 50px;
 }
 
 .code-snippet-header {
@@ -352,4 +353,29 @@ pre div::before {
 
 .code-snippet-header-right > button:hover {
   color: white;
+}
+
+.code-snippet-content{
+  width: 100%;
+  padding: 12px; /* Add padding to show rounded corners */
+  box-sizing: border-box;
+  background: transparent; /* Or match your page background */
+}
+
+.code-snippet-content pre {
+  background: #011221;
+  border-radius: 10px; /* Smaller radius */
+  padding: 0px 20px;
+  margin: 0;
+  font-family: "Fira Code", monospace;
+  font-size: 1em;
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  width: auto; /* Let it size naturally */
+}
+
+.code-snippet-content pre code {
+  background-color: #011221;
+  width: 100%;
+  line-height: 20px;
 }

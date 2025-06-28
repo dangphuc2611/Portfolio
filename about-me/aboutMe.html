@@ -9,6 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="aboutMe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </head>
 
 <body>
@@ -18,9 +21,9 @@
         </div>
         <div id="menus-container">
             <div id="side-menu">
-                <button class="side-btn"><img src="about-me-icon/professional-info-icon.png" alt=""></button>
+                <button onclick="alert('Not available')" class="side-btn"><img src="about-me-icon/professional-info-icon.png" alt=""></button>
                 <button class="side-btn"><img src="about-me-icon/personal-info-icon.png" alt=""></button>
-                <button class="side-btn"><img src="about-me-icon/hobbies-icon.png" alt=""></button>
+                <button onclick="alert('Not available')" class="side-btn"><img src="about-me-icon/hobbies-icon.png" alt=""></button>
             </div>
             <div id="explorer-menu">
                 <div onclick="toggleRotation()" style="padding: 0%; padding-left: 15px; white-space: nowrap;"
@@ -73,7 +76,7 @@
                 <a href="https://dangphuc.site" class="header-items-container" id="hello">
                     <div class="header-text">_hello</div>
                 </a>
-                <a href="" class="header-items-container" id="about-me">
+                <a style="border-bottom: #FEA55F solid 3px;" href="" class="header-items-container" id="about-me">
                     <div class="header-text">_about-me</div>
                 </a>
                 <a href="" class="header-items-container" id="projects">
@@ -141,6 +144,69 @@
                                 <button style="margin-right: 10px;"><img class="icon" src="../static/icons/comment-icon.svg" alt="">details</button>
                                 <button><img class="icon" src="../static/icons/star-icon.svg" alt="">starts</button>
                             </div>
+                        </div>
+                        <div class="code-snippet-content">
+                          <pre><code class="language-typescript">
+function initializeModelChunk&lt;T&gt;(chunk: ResolvedModelChunk): T {
+  const value: T = parseModel(chunk._response, chunk._value);
+  const initializedChunk: InitializedChunk&lt;T&gt; = (chunk: any);
+  initializedChunk._status = INITIALIZED;
+  initializedChunk._value = value;
+  return value;
+}
+                          </code></pre>
+                        </div>
+                    </div>
+                    <div class="code-snippet">
+                        <div class="code-snippet-header">
+                            <div class="code-snippet-header-left">
+                                <img class="avatar" src="../static/images/avatar.jpg" alt="">
+                                <div class="header-info">
+                                    <span class="username">@username</span>
+                                    <span class="posted-date">Created 5 month ago</span>
+                                </div>
+                            </div>
+                            <div class="code-snippet-header-right">
+                                <button style="margin-right: 10px;"><img class="icon" src="../static/icons/comment-icon.svg" alt="">details</button>
+                                <button><img class="icon" src="../static/icons/star-icon.svg" alt="">starts</button>
+                            </div>
+                        </div>
+                        <div class="code-snippet-content">
+                          <pre><code class="language-typescript">
+function initializeModelChunk&lt;T&gt;(chunk: ResolvedModelChunk): T {
+  const value: T = parseModel(chunk._response, chunk._value);
+  const initializedChunk: InitializedChunk&lt;T&gt; = (chunk: any);
+  initializedChunk._status = INITIALIZED;
+  initializedChunk._value = value;
+  return value;
+}
+                          </code></pre>
+                        </div>
+                    </div>
+                    <div class="code-snippet">
+                        <div class="code-snippet-header">
+                            <div class="code-snippet-header-left">
+                                <img class="avatar" src="../static/images/avatar.jpg" alt="">
+                                <div class="header-info">
+                                    <span class="username">@username</span>
+                                    <span class="posted-date">Created 5 month ago</span>
+                                </div>
+                            </div>
+                            <div class="code-snippet-header-right">
+                                <button style="margin-right: 10px;"><img class="icon" src="../static/icons/comment-icon.svg" alt="">details</button>
+                                <button><img class="icon" src="../static/icons/star-icon.svg" alt="">starts</button>
+                            </div>
+                        </div>
+                        <div class="code-snippet-content">
+                          <pre><code class="language-typescript">
+function initializeModelChunk&lt;T&gt;(chunk: ResolvedModelChunk): T {
+  const value: T = parseModel(chunk._response, chunk._value);
+  const initializedChunk: InitializedChunk&lt;T&gt; = (chunk: any);
+  initializedChunk._status = INITIALIZED;
+  initializedChunk._value = value;
+  return value;
+}
+                          </code></pre>
                         </div>
                     </div>
                 </div>
