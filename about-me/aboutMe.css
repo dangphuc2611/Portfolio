@@ -27,7 +27,7 @@ html {
 }
   
 body {
-  /* overflow: hidden; */
+  overflow: hidden;
   display: flex;
   background-color: var(--background-color);
   margin: 0%;
@@ -112,6 +112,15 @@ li {
 
 }
 
+#gmail-container:hover {
+  /* background-color: blue; */
+  /* color: blue; */
+}
+
+#short-email {
+  display: none;
+}
+
 .menu-container {
   width: 100%;
   border-bottom: var(--border-color) solid 0.5px;
@@ -162,8 +171,8 @@ header {
   margin-left: 2.5em;
   margin-right: 2.5em;
   /* font-size: 2.272729vh; */
-  font-size: 1.04712vw;
-  /* font-size: 16px; */
+  /* font-size: 1.04712vw; */
+  font-size: 16px;
 }
 
 
@@ -378,4 +387,94 @@ pre div::before {
   background-color: #011221;
   width: 100%;
   line-height: 20px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  background: var(--background-color);
+  border-top: 1px solid var(--border-color);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+#left-footer,
+#right-footer {
+  display: flex;
+  height: 100%;
+}
+
+.footer-text {
+  color: var(--text-color);
+  margin-left: 0.96875em;
+  margin-right: 0.96875em;
+}
+
+.footer-items-container {
+  height: 100%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+#left-footer>.footer-items-container {
+  border-right: solid 0.5px var(--border-color);
+}
+
+#right-footer>.footer-items-container {
+  border-left: solid 0.5px var(--border-color);
+}
+
+@media (max-width: 90em) {
+  body {
+    /* overflow: auto; */
+  }
+
+  footer {
+    /* display: none; */
+  }
+
+  .tabs-container {
+    width: 100%;
+  }
+
+  #left-tabs-container > .tab-editor {
+    /* overflow: hidden; */
+    z-index: 1000;
+    position: fixed;
+    background-color: var(--background-color);
+  }
+
+  #tabs-container {
+    overflow: auto;
+    display: block;
+  }
+
+  #tab-display {
+    position: relative;
+    top: 50px;
+    width: 100%;
+  }
+  
+  #right-tabs-container > .tab-editor {
+    display: none;
+  }
+
+  #long-email {
+    display: none;
+  }
+
+  #short-email {
+    display: inline;
+  }
+}
+
+@media (max-width: 64em) {
+  #menus {
+    display: none;
+  }
 }

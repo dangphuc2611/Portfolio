@@ -49,7 +49,7 @@
                                     src="about-me-icon/drop-down-arrow.png" alt=""><img class="icon"
                                     src="about-me-icon/blue-folder.png" alt="">education</a></div>
                         <li class="explorer-item"><a href=""><img class="icon" src="about-me-icon/file-icon.png"
-                                    alt="">FPT-high-school</a></li>
+                                    alt="">high-school</a></li>
                         <li class="explorer-item"><a href=""><img class="icon" src="about-me-icon/file-icon.png"
                                     alt="">university</a></li>
                     </ul>
@@ -57,10 +57,11 @@
                 <div style="padding: 8px 15px;" class="menu-container" id="contacts-container"><img class="icon"
                         src="about-me-icon/drop-menu-icon.png" alt="">contacts</div>
                 <div id="contacts-info" class="menu-container" style="box-sizing: border-box;">
-                    <a href="#" data-copy="nguyendangphuc2611@gmail.com" class="explorer-item" id="gmail-container">
+                    <a href="#" style="text-decoration: underline;" data-copy="nguyendangphuc2611@gmail.com" class="explorer-item" id="gmail-container" onclick="alert('Email copied to clipboard!')">
                         <img class="icon" style="height: fit-content; width: fit-content;"
                             src="about-me-icon/mail-icon.png" alt="">
-                        <div>nguyendangphuc2611</div>
+                        <div id="long-email">nguyendangphuc2611</div>
+                        <div id="short-email">email</div>
                     </a>
                     <div class="explorer-item">
                         <img class="icon" src="about-me-icon/phone-icon.png" alt="">
@@ -88,7 +89,7 @@
                     <div class="header-text">_contact-me</div>
                 </a>
                 <button id="header-btn" class="header-items-container">
-                    <!-- <img src="./static/icons/menu-icon.svg" alt=""> -->
+                    <img src="../static/icons/menu-icon.svg" alt="">
                 </button>
             </div>
         </header>
@@ -121,7 +122,7 @@
                     <div class="code-line comment"> * nulla pariatur. Excepteur sint occaecat</div>
                     <div class="code-line comment"> * officia deserunt mollit anim id est laborum.</div>
                     <div class="code-line comment"> */</div>
-                    <div style="height: 500px;"></div>
+                    <div></div>
                 </div>
             </div>
             
@@ -212,9 +213,28 @@ function initializeModelChunk&lt;T&gt;(chunk: ResolvedModelChunk): T {
                 </div>
             </div>
         </div>
-
     </div>
+    <footer>
+        <div id="left-footer">
+            <div class="footer-items-container">
+                <div class="footer-text">find me in:</div>
+            </div>
+            <a class="footer-items-container" href="https://www.facebook.com/profile.php?id=100050729044921">
+                <div class="footer-text" style="display: flex; justify-content: center; align-items: center;">
+                    <img src="../static/icons/facebook-icon.svg" alt="">
+                </div>
+            </a>
+        </div>
+        <div id="right-footer">
+            <a class="footer-items-container" href="https://github.com/dangphuc2611">
+                <span style="display: flex; justify-content: space-between;" class="footer-text">
+                    <div>@dangphuc2611</div>
+                    <img style="margin-left: 10px;" src="../static/icons/github-icon.svg" alt="">
+                </span>
 
+            </a>
+        </div>
+    </footer>
 
     <script src="aboutMe.js"></script>
 </body>

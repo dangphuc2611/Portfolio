@@ -17,10 +17,11 @@
 
 html {
   height: 100%;
-
+  overflow: hidden;
 }
 
 body {
+  overflow: hidden;
   background-color: var(--background-color);
   margin: 0%;
   padding: 0%;
@@ -313,6 +314,10 @@ footer {
 }
 
 @media screen and (max-width: 64em) {
+
+  body, html {
+    overflow: auto;
+  }
 
   #background-blurs {
     top: 0px;
