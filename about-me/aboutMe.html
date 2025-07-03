@@ -21,9 +21,11 @@
         </div>
         <div id="menus-container">
             <div id="side-menu">
-                <button onclick="alert('Not available')" class="side-btn"><img src="about-me-icon/professional-info-icon.png" alt=""></button>
+                <button onclick="alert('Not available')" class="side-btn"><img
+                        src="about-me-icon/professional-info-icon.png" alt=""></button>
                 <button class="side-btn"><img src="about-me-icon/personal-info-icon.png" alt=""></button>
-                <button onclick="alert('Not available')" class="side-btn"><img src="about-me-icon/hobbies-icon.png" alt=""></button>
+                <button onclick="alert('Not available')" class="side-btn"><img src="about-me-icon/hobbies-icon.png"
+                        alt=""></button>
             </div>
             <div id="explorer-menu">
                 <div onclick="toggleRotation()" style="padding: 0%; padding-left: 15px; white-space: nowrap;"
@@ -57,7 +59,8 @@
                 <div style="padding: 8px 15px;" class="menu-container" id="contacts-container"><img class="icon"
                         src="about-me-icon/drop-menu-icon.png" alt="">contacts</div>
                 <div id="contacts-info" class="menu-container" style="box-sizing: border-box;">
-                    <a href="#" style="text-decoration: underline;" data-copy="nguyendangphuc2611@gmail.com" class="explorer-item" id="gmail-container" onclick="alert('Email copied to clipboard!')">
+                    <a href="#" style="text-decoration: underline;" data-copy="nguyendangphuc2611@gmail.com"
+                        class="explorer-item" id="gmail-container" onclick="alert('Email copied to clipboard!')">
                         <img class="icon" style="height: fit-content; width: fit-content;"
                             src="about-me-icon/mail-icon.png" alt="">
                         <div id="long-email">nguyendangphuc2611</div>
@@ -72,7 +75,22 @@
         </div>
     </div>
     <div id="content-container">
-        <header>
+        <header id="small-header">
+            <div id="left-header">
+                <div class="header-items-container" id="name">
+                    <div style="margin-right: 10vw ;" class="header-text">nguyen-dang-phuc</div>
+                </div>
+            </div>
+            <div id="right-header">
+                <a href="" class="header-items-container" id="contact-me">
+                    <div class="header-text">_contact-me</div>
+                </a>
+                <button id="header-btn" class="header-items-container">
+                    <img style="margin: 15px;" src="../static/icons/menu-icon.svg" alt="">
+                </button>
+            </div>
+        </header>
+        <header id="large-header">
             <div id="left-header">
                 <a href="https://dangphuc.site" class="header-items-container" id="hello">
                     <div class="header-text">_hello</div>
@@ -94,9 +112,77 @@
             </div>
         </header>
         <div id="tabs-container">
+            <div id="mobile-explore-menu">
+                <div style="padding: 20px 7vw;">
+                    _about-me
+                </div>
+                <div id="mobile-explore-folder">
+                    <div style="width: 100%;">
+                        <div id="mobile-personal-info-container" class="mobile-items" onclick="toggleRotation()"
+                            style="padding: 0%; padding-left: 7vw; white-space: nowrap; background-color: #1E2D3D; width: 100%;">
+                            <a href="#">
+                                <img style="transition: 0.3 ease;" onclick="toggleRotation()" class="icon"
+                                    src="about-me-icon/drop-menu-icon.png" alt="">personal-info
+                            </a>
+                        </div>
+
+                        <div style="margin-left: 7vw;" id="mobile-folder-container">
+                            <ul onclick="toggleItems(this)">
+                                <div class="explorer-item"><a href="#"><img class="icon"
+                                            src="about-me-icon/drop-down-arrow.png" alt=""><img class="icon"
+                                            src="about-me-icon/red-folder.png" alt="">bio</a></div>
+                                <!-- <li class="explorer-item"><a href="#"><img class="icon" src="about-me-icon/file-icon.png" alt="">high-school</a></li>
+                        <li class="explorer-item"><a href=""><img class="icon" src="about-me-icon/file-icon.png" alt="">university</a></li> -->
+                            </ul>
+                            <ul onclick="toggleItems(this)">
+                                <div class="explorer-item"><a href="#"><img onclick="hideMenu()" class="icon"
+                                            src="about-me-icon/drop-down-arrow.png" alt=""><img class="icon"
+                                            src="about-me-icon/green-folder.png" alt="">interests</a></div>
+                                <!-- <li class="explorer-item"><a href=""><img class="icon" src="about-me-icon/file-icon.png" alt="">high-school</a></li>
+                        <li class="explorer-item"><a href=""><img class="icon" src="about-me-icon/file-icon.png" alt="">university</a></li> -->
+                            </ul>
+                            <ul onclick="toggleItems(this)">
+                                <div class="explorer-item"><a href="#"><img onclick="hideMenu()" id="icon1" class="icon"
+                                            src="about-me-icon/drop-down-arrow.png" alt=""><img class="icon"
+                                            src="about-me-icon/blue-folder.png" alt="">education</a>
+                                </div>
+                                <li class="explorer-item"><a href=""><img class="icon" src="about-me-icon/file-icon.png"
+                                            alt="">high-school</a></li>
+                                <li class="explorer-item"><a href=""><img class="icon" src="about-me-icon/file-icon.png"
+                                            alt="">university</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="width: 100%;">
+                        <div id="mobile-contacts-container" onclick="toggleRotation()"
+                            style="padding: 0%; padding-left: 7vw; white-space: nowrap; background-color: #1E2D3D; width: 100%;">
+                            <a href="#">
+                                <img style="transition: 0.3 ease;" onclick="toggleRotation()" class="icon"
+                                    src="about-me-icon/drop-menu-icon.png" alt="">contacts
+                            </a>
+                        </div>
+
+                        <div id="mobile-contact-info" class="mobile-items" style="box-sizing: border-box;">
+                            <a href="#" style="text-decoration: underline;" data-copy="nguyendangphuc2611@gmail.com"
+                                class="explorer-item" id="gmail-container"
+                                onclick="alert('Email copied to clipboard!')">
+                                <img class="icon" style="height: fit-content; width: fit-content;"
+                                    src="about-me-icon/mail-icon.png" alt="">
+                                <div id="long-email">nguyendangphuc2611</div>
+                                <div id="short-email">email</div>
+                            </a>
+                            <div class="explorer-item">
+                                <img class="icon" src="about-me-icon/phone-icon.png" alt="">
+                                <span>0968987278</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div id="left-tabs-container" class="tabs-container">
                 <div class="tab-editor">
-                    <div style="display: flex; align-items: center; height: 100%; border-right: solid var(--border-color) 0.5px; padding: 5px 10px;">
+                    <div
+                        style="display: flex; align-items: center; height: 100%; border-right: solid var(--border-color) 0.5px; padding: 5px 10px;">
                         <p style="margin-right: 50px;">personal-info</p>
                         <button style="display: flex; align-items: center;">
                             <img src="/static/icons/close-icon.png" alt="">
@@ -104,7 +190,7 @@
                     </div>
                 </div>
                 <div id="tab-display">
-<!-- <pre contenteditable="true" spellcheck="false"><span>/**
+                    <!-- <pre contenteditable="true" spellcheck="false"><span>/**
 </span></pre> -->
                     <div class="code-line comment">/**</div>
                     <div class="code-line comment"> * About me</div>
@@ -125,10 +211,10 @@
                     <div></div>
                 </div>
             </div>
-            
+
             <div id="right-tabs-container" class="tabs-container" style="border-left: var(--border-color) solid 0.5px;">
                 <div class="tab-editor">
-                    
+
                 </div>
                 <div id="tab-display">
                     <div style="margin-bottom: 50px;">// code snippet showcase:</div>
@@ -142,12 +228,14 @@
                                 </div>
                             </div>
                             <div class="code-snippet-header-right">
-                                <button style="margin-right: 10px;"><img class="icon" src="../static/icons/comment-icon.svg" alt="">details</button>
-                                <button><img class="icon" src="../static/icons/star-icon.svg" alt="">starts</button>
+                                <button class="details-btn" style="margin-right: 10px;"><img class="icon"
+                                        src="../static/icons/comment-icon.svg" alt="">details</button>
+                                <button id="star-icon"><img class="icon" src="../static/icons/star-icon.svg"
+                                        alt="">starts</button>
                             </div>
                         </div>
                         <div class="code-snippet-content">
-                          <pre><code class="language-typescript">
+                            <pre><code class="language-typescript">
 function initializeModelChunk&lt;T&gt;(chunk: ResolvedModelChunk): T {
   const value: T = parseModel(chunk._response, chunk._value);
   const initializedChunk: InitializedChunk&lt;T&gt; = (chunk: any);
@@ -168,12 +256,14 @@ function initializeModelChunk&lt;T&gt;(chunk: ResolvedModelChunk): T {
                                 </div>
                             </div>
                             <div class="code-snippet-header-right">
-                                <button style="margin-right: 10px;"><img class="icon" src="../static/icons/comment-icon.svg" alt="">details</button>
-                                <button><img class="icon" src="../static/icons/star-icon.svg" alt="">starts</button>
+                                <button class="details-btn"><img class="icon" src="../static/icons/comment-icon.svg"
+                                        alt="">details</button>
+                                <button id="star-icon"><img class="icon" src="../static/icons/star-icon.svg"
+                                        alt="">starts</button>
                             </div>
                         </div>
                         <div class="code-snippet-content">
-                          <pre><code class="language-typescript">
+                            <pre><code class="language-typescript">
 function initializeModelChunk&lt;T&gt;(chunk: ResolvedModelChunk): T {
   const value: T = parseModel(chunk._response, chunk._value);
   const initializedChunk: InitializedChunk&lt;T&gt; = (chunk: any);
@@ -194,12 +284,14 @@ function initializeModelChunk&lt;T&gt;(chunk: ResolvedModelChunk): T {
                                 </div>
                             </div>
                             <div class="code-snippet-header-right">
-                                <button style="margin-right: 10px;"><img class="icon" src="../static/icons/comment-icon.svg" alt="">details</button>
-                                <button><img class="icon" src="../static/icons/star-icon.svg" alt="">starts</button>
+                                <button class="details-btn" style="margin-right: 10px;"><img class="icon"
+                                        src="../static/icons/comment-icon.svg" alt="">details</button>
+                                <button id="star-icon"><img class="icon" src="../static/icons/star-icon.svg"
+                                        alt="">starts</button>
                             </div>
                         </div>
                         <div class="code-snippet-content">
-                          <pre><code class="language-typescript">
+                            <pre><code class="language-typescript">
 function initializeModelChunk&lt;T&gt;(chunk: ResolvedModelChunk): T {
   const value: T = parseModel(chunk._response, chunk._value);
   const initializedChunk: InitializedChunk&lt;T&gt; = (chunk: any);
@@ -235,7 +327,39 @@ function initializeModelChunk&lt;T&gt;(chunk: ResolvedModelChunk): T {
             </a>
         </div>
     </footer>
+    <div id="overlay"></div>
+    <div id="drop-menu">
+        <div id="upper-drop-menu" style="width: 100%;">
+            <div class="menu-items-container" id="name-container">
+                <div class="menu-texts" id="menu-name">nguyen-dang-phuc</div>
+                <button id="close-btn"><img src="static/images/Vector.png" alt="" srcset=""></button>
+            </div>
+            <a id="hello-container" class="menu-items-container" href="https://dangphuc.site">
+                <div class="menu-texts" id="menu-hello">_hello</div>
+            </a>
+            <a href="/about-me/aboutMe.html" class="menu-items-container" id="about-me-container">
+                <div class="menu-texts" id="menu-about-me">_about-me</div>
+            </a>
+            <a href="" class="menu-items-container" id="projects-container">
+                <div class="menu-texts" id="menu-projects">_projects</div>
+            </a>
+            <a href="" class="menu-items-container" id="contact-me-container">
+                <div class="menu-texts" id="menu-contact-me">_contact-me</div>
+            </a>
+        </div>
+        <div id="footer-menu">
+            <div class="menu-items-container" id="find-me-in-container">
+                <span id="menu-find-me-in" class="menu-texts">find me in:</span>
+                <div style="height: 100%; display: flex; align-items: center;">
+                    <a id="menu-facebook-icon" href="https://www.facebook.com/profile.php?id=100050729044921"><img
+                            src="../static/icons/facebook-icon.svg" alt=""></a>
+                    <a id="menu-github-icon" href="https://github.com/dangphuc2611"><img
+                            src="../static/icons/github-icon.svg" alt=""></a>
+                </div>
 
+            </div>
+        </div>
+    </div>
     <script src="aboutMe.js"></script>
 </body>
 

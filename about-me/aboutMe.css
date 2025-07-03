@@ -429,7 +429,7 @@ footer {
   border-left: solid 0.5px var(--border-color);
 }
 
-@media (max-width: 90em) {
+@media (max-width: 90em)  {
   body {
     /* overflow: auto; */
   }
@@ -444,7 +444,7 @@ footer {
 
   #left-tabs-container > .tab-editor {
     /* overflow: hidden; */
-    z-index: 1000;
+    z-index: 10;
     position: fixed;
     background-color: var(--background-color);
   }
@@ -456,7 +456,7 @@ footer {
 
   #tab-display {
     position: relative;
-    top: 50px;
+    /* top: 50px; */
     width: 100%;
   }
   
@@ -471,10 +471,225 @@ footer {
   #short-email {
     display: inline;
   }
+
+  /* .tab-editor */
 }
+
+#small-header {
+  display: none;
+}
+
+#overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+}
+
+#drop-menu {
+  display: flex;
+flex-direction: column;
+justify-content: space-between;
+  z-index: 1000;
+  width: 21.875em;
+  height: 100%;
+  position: absolute;
+  background-color: var(--background-color);
+  right: 0;
+  display: none;
+}
+
+.menu-items-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-bottom: var(--border-color) solid 0.5px;
+  height: 5.5vh;
+}
+
+.menu-texts {
+  color: var(--text-color);
+  font-size: 16px;
+  margin-left: 15px;
+}
+
+#name-container {
+  justify-content: space-between;
+}
+
+#name-container > button {
+  border: none;
+  background-color: transparent;
+  margin-right: 10px
+}
+
+#footer-menu {
+  border-top: var(--border-color) solid 0.5px;
+  width: 100%;
+}
+
+#menu-find-me-in {
+  display: flex;
+  align-items: center;
+  border-right: var(--border-color) solid 0.5px;
+  height: 100%;
+  padding-right: 15px;
+}
+
+#find-me-in-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#menu-facebook-icon, #menu-github-icon {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: var(--border-color) solid 0.5px;
+  padding: 0px 1.409vh 0px 1.409vh;
+}
+
+/* Ẩn overlay và menu ban đầu */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#drop-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  /* width: 300px;
+  height: 100%; */
+  /* background-color: #1e1e1e; */
+  /* color: white; */
+  z-index: 11;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#drop-menu.active {
+  right: 0;
+}
+
+.upper-drop-menu > div {
+  width: 100%;
+}
+
+.menu-items-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#mobile-explore-menu {
+  display: none;
+}
+
 
 @media (max-width: 64em) {
   #menus {
     display: none;
   }
+
+  footer {
+    display: none;
+  }
+
+  #small-header {
+    display: flex;
+  }
+
+  #large-header {
+    display: none;
+  }
+  #header-btn {
+    display: block;
+  }
+
+  #contact-me {
+    display: none;
+  }
+
+  #tabs-display {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  /* #star-icon {
+    display: none;
+  } */
+
+  #left-header>.header-items-container {
+    border-right: none ;
+  }
+
+  .tab-editor {
+    /* height: auto; */
+    /* display: none; */
+  }
+
+  @media (max-width: 33.125em) {
+    .tab-editor {
+      display: none;
+    }
+
+    #mobile-explore-menu {
+      display: block;
+      width: 100%;
+    }
+
+    #mobile-explore-menu > div {
+      width: 100%;
+    }
+
+    #content-container {
+      overflow: auto;
+    }
+
+    #mobile-personal-info-container, #mobile-contacts-container{
+      margin: 2px;
+    }
+
+    #tab-display {
+      overflow: scroll;
+    }
+
+    #mobile-contact-info {
+      width: 100%;
+      padding-left: 7vw;
+    }
+
+    #mobile-contact-info, #mobile-folder-container {
+      margin: 20px 0;
+    }
+
+    #mobile-items {
+      margin: 3px;
+    }
+  }
+}
+
+.details-btn {
+  margin-right: 10px;
+  display: none;
 }

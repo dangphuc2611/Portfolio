@@ -4,6 +4,18 @@ let personalInfo = document.getElementById("personal-info-container");
 let contact = document.getElementById("contacts-container");
 let education = document.getElementById("education-container")
 
+let mobilePersonalInfo = document.getElementById("mobile-personal-info-container");
+let mobileContact = document.getElementById("mobile-contacts-container");
+let mobileEducation = document.getElementById("mobile-education-container")
+
+mobilePersonalInfo.addEventListener("click", () => {
+    document.getElementById("mobile-folder-container").classList.toggle("hidden")
+})
+
+mobileContact.addEventListener("click", () => {
+    document.getElementById("mobile-contact-info").classList.toggle("hidden")
+})
+
 personalInfo.addEventListener("click", () => {
     document.getElementById("folder-container").classList.toggle("hidden")
 });
@@ -61,4 +73,29 @@ images.forEach(image => {
         }
         isRotated = !isRotated; // Đảo trạng thái xoay
     });
+});
+
+const headerBtn = document.getElementById("header-btn");
+const closeBtn = document.getElementById("close-btn");
+const overlay = document.getElementById("overlay");
+const dropMenu = document.getElementById("drop-menu");
+
+// Hiển thị menu và overlay
+headerBtn.addEventListener("click", () => {
+    overlay.classList.add("active");
+    dropMenu.classList.add("active");
+    document.getElementById("overlay").style.display = "block"
+});
+
+// Đóng menu và overlay
+closeBtn.addEventListener("click", () => {
+    overlay.classList.remove("active");
+    dropMenu.classList.remove("active");
+     document.getElementById("overlay").style.display = "none"
+});
+
+overlay.addEventListener("click", () => {
+    overlay.classList.remove("active");
+    dropMenu.classList.remove("active");
+     document.getElementById("overlay").style.display = "none"
 });
