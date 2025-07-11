@@ -8,11 +8,17 @@
     --background-color: #011627;
 }
 
-* {
+*{
   color: var(--text-color);
   text-decoration: none; 
   width: fit-content;
   box-sizing: border-box;
+}
+.fira-code {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 100%;
+  font-style: normal;
 }
 
 html {
@@ -31,6 +37,7 @@ body {
 }
 
 #menus {
+  /* min-width: 280px; */
   max-width: fit-content;
   width: fit-content;
   height: 100%;
@@ -50,7 +57,10 @@ body {
 #menus-container {
   display: flex;
   height: calc(100% - 50px);
+  flex-direction: column;
 }
+
+#menus
 
 #side-menu {
   display: flex;
@@ -71,6 +81,8 @@ button {
 }
 
 #explorer-menu {
+  /* padding-left: 5%;
+  padding-right: 5%; */
   width: 15vw;
   box-sizing: border-box;
 }
@@ -79,6 +91,7 @@ button {
   height: 40px; 
   display: flex;
   align-items: center;
+
 }
 
 ul {
@@ -87,14 +100,31 @@ ul {
   list-style-type: none;
 }
 
+li {
+
+}
+
 .menu-container {
   padding: 15px 15px;
-  width: 100%;
-  border-bottom: var(--border-color) solid 0.5px;
 }
 
 #gmail-container {
   display: flex;
+
+}
+
+#gmail-container:hover {
+  /* background-color: blue; */
+  /* color: blue; */
+}
+
+#short-email {
+  display: none;
+}
+
+.menu-container {
+  width: 100%;
+  border-bottom: var(--border-color) solid 0.5px;
 }
 
 .icon {
@@ -106,6 +136,7 @@ ul li {
 }
 
 #content-container {
+  height: fit-content;
   width: 100%;
   height: 100%;
 }
@@ -140,8 +171,11 @@ header {
   text-decoration: none;
   margin-left: 2.5em;
   margin-right: 2.5em;
+  /* font-size: 2.272729vh; */
+  /* font-size: 1.04712vw; */
   font-size: 16px;
 }
+
 
 .header-items-container {
   display: flex;
@@ -161,7 +195,6 @@ header {
 #tabs-container {
   width: 100%;
   height: calc(100% - 50px);
-  display: flex;
 }
 
 .tab-editor {
@@ -194,9 +227,41 @@ header {
   align-items: center;
 }
 
-.tabs-container {
-  width: 50%;
+#tabs-container {
+  display: flex;
 }
+
+.tabs-container {
+  width: 100%;
+}
+
+/* pre {
+  background: #303030;
+  padding: 10px 16px;
+  color: var(--text-color);
+  counter-reset: line 1;
+}
+
+pre>span::before {
+  content: '1';
+  display: inline-block;
+  padding: 0 .5em;
+  margin-right: .5em;
+  color: #888;
+}
+
+pre div {
+  line-height: 1.5;
+  counter-increment: line;
+}
+
+pre div::before {
+  content: counter(line);
+  display: inline-block;
+  padding: 0 .5em;
+  margin-right: .5em;
+  color: #888;
+} */
 
 .code-box {
   background-color: #0f172a;
@@ -227,6 +292,7 @@ header {
 #tab-display::-webkit-scrollbar {
   height: 100%;
   width: 10px;
+  /* background: #0f172a; */
 }
 
 #tab-display::-webkit-scrollbar-thumb {
@@ -238,7 +304,9 @@ header {
   background: #334155;
 }
 
+/* Optional: Hide scrollbar track border */
 #tab-display::-webkit-scrollbar-track {
+  /* background: #0f172a; */
   border-left: solid 1px var(--border-color);
   box-sizing: border-box;
   padding: 10px;
@@ -297,23 +365,23 @@ header {
   color: white;
 }
 
-.code-snippet-content {
+.code-snippet-content{
   width: 100%;
-  padding: 12px;
+  padding: 12px; /* Add padding to show rounded corners */
   box-sizing: border-box;
-  background: transparent;
+  background: transparent; /* Or match your page background */
 }
 
 .code-snippet-content pre {
   background: #011221;
-  border-radius: 10px;
+  border-radius: 10px; /* Smaller radius */
   padding: 0px 20px;
   margin: 0;
   font-family: "Fira Code", monospace;
   font-size: 1em;
   overflow-x: auto;
   border: 1px solid var(--border-color);
-  width: auto;
+  width: auto; /* Let it size naturally */
 }
 
 .code-snippet-content pre code {
@@ -362,12 +430,21 @@ footer {
   border-left: solid 0.5px var(--border-color);
 }
 
-@media (max-width: 90em) {
+@media (max-width: 90em)  {
+  body {
+    /* overflow: auto; */
+  }
+
+  footer {
+    /* display: none; */
+  }
+
   .tabs-container {
     width: 100%;
   }
 
   #left-tabs-container > .tab-editor {
+    /* overflow: hidden; */
     z-index: 10;
     position: fixed;
     background-color: var(--background-color);
@@ -380,11 +457,8 @@ footer {
 
   #tab-display {
     position: relative;
+    /* top: 50px; */
     width: 100%;
-  }
-  
-  #right-tabs-container > .tab-editor {
-    display: none;
   }
 
   #long-email {
@@ -394,6 +468,8 @@ footer {
   #short-email {
     display: inline;
   }
+
+  /* .tab-editor */
 }
 
 #small-header {
@@ -410,8 +486,8 @@ footer {
 
 #drop-menu {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+flex-direction: column;
+justify-content: space-between;
   z-index: 1000;
   width: 21.875em;
   height: 100%;
@@ -427,8 +503,6 @@ footer {
   text-decoration: none;
   border-bottom: var(--border-color) solid 0.5px;
   height: 5.5vh;
-  justify-content: space-between;
-  width: 100%;
 }
 
 .menu-texts {
@@ -475,6 +549,7 @@ footer {
   padding: 0px 1.409vh 0px 1.409vh;
 }
 
+/* Ẩn overlay và menu ban đầu */
 #overlay {
   position: fixed;
   top: 0;
@@ -492,6 +567,10 @@ footer {
   position: fixed;
   top: 0;
   right: -100%;
+  /* width: 300px;
+  height: 100%; */
+  /* background-color: #1e1e1e; */
+  /* color: white; */
   z-index: 11;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
   transition: right 0.3s ease;
@@ -513,9 +592,16 @@ footer {
   width: 100%;
 }
 
+.menu-items-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 #mobile-explore-menu {
   display: none;
 }
+
 
 @media (max-width: 64em) {
   #menus {
@@ -546,8 +632,17 @@ footer {
     overflow-y: hidden;
   }
 
+  /* #star-icon {
+    display: none;
+  } */
+
   #left-header>.header-items-container {
     border-right: none ;
+  }
+
+  .tab-editor {
+    /* height: auto; */
+    /* display: none; */
   }
 
   @media (max-width: 33.125em) {
@@ -595,3 +690,121 @@ footer {
   margin-right: 10px;
   display: none;
 }
+
+/* .project-type {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 28px;
+  height: 28px;
+  background: #0f1b28;
+  border: 2px solid #607B96;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+  vertical-align: middle;
+}
+
+.project-type:checked {
+  background: #334155;
+  border-color: #607B96;
+}
+
+.project-type:checked::after {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 4px;
+  width: 8px;
+  height: 14px;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  border-radius: 1px;
+  transform: rotate(45deg);
+  box-sizing: border-box;
+} */
+
+  .checkbox-wrapper-1 *,
+  .checkbox-wrapper-1 ::after,
+  .checkbox-wrapper-1 ::before {
+    box-sizing: border-box;
+    margin: 5px 0;
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted {
+    margin: 0;
+    width: 0;
+    height: 0;
+    display: inline;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted + label:before {
+    content: "";
+    display: inline-block;
+    vertical-align: top;
+    /* height: 1.15em;
+    width: 1.15em; */
+    width: 1.375em;
+    height: 1.375em;
+    margin-right: 0.9375em;
+    color: rgba(0, 0, 0, 0.275);
+    border: solid 0.06em;
+    box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em inset, 0 0 0 0.07em transparent inset;
+    border-radius: 0.2em;
+    background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve" fill="white" viewBox="0 0 9 9"><rect x="0" y="4.3" transform="matrix(-0.707 -0.7072 0.7072 -0.707 0.5891 10.4702)" width="4.3" height="1.6" /><rect x="2.2" y="2.9" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 12.1877 2.9833)" width="6.1" height="1.7" /></svg>') no-repeat center, white;
+    background-size: 0;
+    will-change: color, border, background, background-size, box-shadow;
+    transform: translate3d(0, 0, 0);
+    transition: color 0.1s, border 0.1s, background 0.15s, box-shadow 0.1s;
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted:enabled:active + label:before,
+  .checkbox-wrapper-1 [type=checkbox].substituted:enabled + label:active:before {
+    box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em transparent inset, 0 0 0 0.07em rgba(0, 0, 0, 0.1) inset;
+    background-color: #f0f0f0;
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted:checked + label:before {
+    background-color: rgba(96, 123, 150, 1);
+    background-size: 0.75em;
+    color: rgba(0, 0, 0, 0.075);
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted:checked:enabled:active + label:before,
+  .checkbox-wrapper-1 [type=checkbox].substituted:checked:enabled + label:active:before {
+    background-color: rgba(96, 123, 150, 1);
+    color: rgba(0, 0, 0, 0.275);
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted:focus + label:before {
+    box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em transparent inset, 0 0 0 0.07em rgba(0, 0, 0, 0.1) inset, 0 0 0 3.3px rgba(65, 159, 255, 0.55), 0 0 0 5px rgba(65, 159, 255, 0.3);
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted:focus:active + label:before,
+  .checkbox-wrapper-1 [type=checkbox].substituted:focus + label:active:before {
+    box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em transparent inset, 0 0 0 0.07em rgba(0, 0, 0, 0.1) inset, 0 0 0 3.3px rgba(65, 159, 255, 0.55), 0 0 0 5px rgba(65, 159, 255, 0.3);
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted:disabled + label:before {
+    opacity: 0.5;
+  }
+
+  .checkbox-wrapper-1 [type=checkbox].substituted.dark + label:before {
+    color: rgba(255, 255, 255, 0.275);
+    background-color: #222;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve" fill="rgba(34, 34, 34, 0.999)" viewBox="0 0 9 9"><rect x="0" y="4.3" transform="matrix(-0.707 -0.7072 0.7072 -0.707 0.5891 10.4702)" width="4.3" height="1.6" /><rect x="2.2" y="2.9" transform="matrix(-0.7071 0.7071 -0.7071 -0.7071 12.1877 2.9833)" width="6.1" height="1.7" /></svg>');
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted.dark:enabled:active + label:before,
+  .checkbox-wrapper-1 [type=checkbox].substituted.dark:enabled + label:active:before {
+    background-color: #444;
+    box-shadow: 0 0 0.04em, 0 0.06em 0.16em -0.03em transparent inset, 0 0 0 0.07em rgba(255, 255, 255, 0.1) inset;
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted.dark:checked + label:before {
+    background-color: #a97035;
+    color: rgba(255, 255, 255, 0.075);
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted.dark:checked:enabled:active + label:before,
+  .checkbox-wrapper-1 [type=checkbox].substituted.dark:checked:enabled + label:active:before {
+    background-color: #c68035;
+    color: rgba(0, 0, 0, 0.275);
+  }
+  .checkbox-wrapper-1 [type=checkbox].substituted + label {
+    -webkit-user-select: none;
+    user-select: none;
+  }
