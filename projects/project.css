@@ -259,6 +259,13 @@ header {
 
 } */
 
+@media (max-width: 91.9375em) {
+  .project-cards {
+    max-width: none;
+  }
+
+}
+
 #contact-info>a {
   display: flex;
   align-items: center;
@@ -645,7 +652,7 @@ footer {
 }
 
 
-@media (max-width: 64em) {
+@media (max-width: 76.875em) {
   #menus {
     display: none;
   }
