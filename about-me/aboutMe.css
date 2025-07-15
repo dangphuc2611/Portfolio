@@ -1,25 +1,25 @@
 :root {
-    font-family: "Fira Code", monospace;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    --text-color: #607B96;
-    --border-color: #1E2D3D;
-    --background-color: #011627;
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  --text-color: #607B96;
+  --border-color: #1E2D3D;
+  --background-color: #011627;
 }
 
 * {
   color: var(--text-color);
-  text-decoration: none; 
+  text-decoration: none;
   width: fit-content;
   box-sizing: border-box;
 }
 
 html {
-    height: 100vh;
-    width: 100%;
+  height: 100vh;
+  width: 100%;
 }
-  
+
 body {
   overflow: hidden;
   display: flex;
@@ -76,7 +76,7 @@ button {
 }
 
 #personal-info-container {
-  height: 40px; 
+  height: 40px;
   display: flex;
   align-items: center;
 }
@@ -189,7 +189,7 @@ header {
   overflow-x: auto;
 }
 
-#contact-info > a {
+#contact-info>a {
   display: flex;
   align-items: center;
 }
@@ -203,7 +203,7 @@ header {
   padding: 20px;
   border-radius: 8px;
   border: 1px solid #1e293b;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   white-space: pre;
   counter-reset: line;
 }
@@ -271,12 +271,12 @@ header {
   flex-direction: column;
 }
 
-.header-info > .username {
+.header-info>.username {
   color: #5565E8;
   font-weight: bold;
 }
 
-.header-info > .posted-date {
+.header-info>.posted-date {
   font-size: 80%;
 }
 
@@ -284,16 +284,16 @@ header {
   display: flex;
 }
 
-.code-snippet-header-right > button {
+.code-snippet-header-right>button {
   display: flex;
   align-items: center;
 }
 
-.code-snippet-header-right > button > .icon {
+.code-snippet-header-right>button>.icon {
   margin-right: 5px;
 }
 
-.code-snippet-header-right > button:hover {
+.code-snippet-header-right>button:hover {
   color: white;
 }
 
@@ -362,12 +362,16 @@ footer {
   border-left: solid 0.5px var(--border-color);
 }
 
+#short-email {
+  display: none;
+}
+
 @media (max-width: 90em) {
   .tabs-container {
     width: 100%;
   }
 
-  #left-tabs-container > .tab-editor {
+  #left-tabs-container>.tab-editor {
     z-index: 10;
     position: fixed;
     background-color: var(--background-color);
@@ -382,8 +386,8 @@ footer {
     position: relative;
     width: 100%;
   }
-  
-  #right-tabs-container > .tab-editor {
+
+  #right-tabs-container>.tab-editor {
     display: none;
   }
 
@@ -441,7 +445,7 @@ footer {
   justify-content: space-between;
 }
 
-#name-container > button {
+#name-container>button {
   border: none;
   background-color: transparent;
   margin-right: 10px
@@ -466,7 +470,8 @@ footer {
   width: 100%;
 }
 
-#menu-facebook-icon, #menu-github-icon {
+#menu-facebook-icon,
+#menu-github-icon {
   height: 100%;
   display: flex;
   justify-content: center;
@@ -509,7 +514,7 @@ footer {
   right: 0;
 }
 
-.upper-drop-menu > div {
+.upper-drop-menu>div {
   width: 100%;
 }
 
@@ -533,6 +538,7 @@ footer {
   #large-header {
     display: none;
   }
+
   #header-btn {
     display: block;
   }
@@ -547,7 +553,47 @@ footer {
   }
 
   #left-header>.header-items-container {
-    border-right: none ;
+    border-right: none;
+  }
+
+  .tab-editor {
+    display: none;
+  }
+
+  #mobile-explore-menu {
+    display: block;
+    width: 100%;
+  }
+
+  #mobile-explore-menu>div {
+    width: 100%;
+  }
+
+  #content-container {
+    overflow: auto;
+  }
+
+  #mobile-personal-info-container,
+  #mobile-contacts-container {
+    margin: 2px;
+  }
+
+  #tab-display {
+    overflow: scroll;
+  }
+
+  #mobile-contact-info {
+    width: 100%;
+    padding-left: 7vw;
+  }
+
+  #mobile-contact-info,
+  #mobile-folder-container {
+    margin: 20px 0;
+  }
+
+  #mobile-items {
+    margin: 3px;
   }
 
   @media (max-width: 33.125em) {
@@ -560,7 +606,7 @@ footer {
       width: 100%;
     }
 
-    #mobile-explore-menu > div {
+    #mobile-explore-menu>div {
       width: 100%;
     }
 
@@ -568,7 +614,8 @@ footer {
       overflow: auto;
     }
 
-    #mobile-personal-info-container, #mobile-contacts-container{
+    #mobile-personal-info-container,
+    #mobile-contacts-container {
       margin: 2px;
     }
 
@@ -581,7 +628,8 @@ footer {
       padding-left: 7vw;
     }
 
-    #mobile-contact-info, #mobile-folder-container {
+    #mobile-contact-info,
+    #mobile-folder-container {
       margin: 20px 0;
     }
 
