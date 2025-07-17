@@ -182,12 +182,41 @@ header {
 }
 
 #tab-display {
+  /* display: flex;
+  justify-content: center; */
   padding: 20px;
   width: 100%;
   height: calc(100% - 90px);
   overflow-y: auto;
   overflow-x: auto;
 }
+
+#contact-form {
+  width: 80%;
+}
+
+.contact-input {
+  width: 100%;
+  background-color: #011221;
+  border: var(--border-color) solid 1px;
+  padding: 10px;
+  border-radius: 8px;
+  margin: 20px 0 20px 0;
+  resize: none;
+}
+
+.contact-input:focus {
+  outline: 1px solid rgba(96, 123, 150, 1);
+  box-shadow: 0px 0px 0px 4px rgba(96, 123, 150, 0.3);
+}
+
+#contact-btn {
+  background-color: rgba(28, 43, 58, 1);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
 
 #contact-info>a {
   display: flex;

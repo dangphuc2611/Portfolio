@@ -1,0 +1,22 @@
+#right-tabs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.orange-text {
+    color: #FEA55F;
+}
+
+.pink-text {
+    color: #C98BDF;
+}
+
+.blue-text {
+    color: #5565E8;
+}
+
+.code-indent {
+    margin-left: 2em;
+}

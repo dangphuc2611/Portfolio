@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../about-me/aboutMe.css">
+    <link rel="stylesheet" href="/contact-me/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+
+<body>
+    <div id="menus">
+        <div id="name">
+            nguyen-dang-phuc
+        </div>
+        <div id="menus-container">
+            <div id="side-menu">
+                <button onclick="alert('Not available')" class="side-btn"><img
+                        src="../static/icons/professional-info-icon.png" alt=""></button>
+                <button class="side-btn"><img src="../static/icons/personal-info-icon.png" alt=""></button>
+                <button onclick="alert('Not available')" class="side-btn"><img src="../static/icons/hobbies-icon.png"
+                        alt=""></button>
+            </div>
+            <div id="explorer-menu">
+                <div onclick="toggleRotation()" style="padding: 0%; padding-left: 15px; white-space: nowrap;"
+                    class="menu-container" id="personal-info-container"><a href="#"><img style="transition: 0.3 ease;"
+                            onclick="toggleRotation()" id="iicon" class="icon" src="../static/icons/drop-menu-icon.png"
+                            alt="">personal-info</div></a>
+                <div class="menu-container" id="folder-container">
+                    <ul onclick="toggleItems(this)">
+                        <div class="explorer-item"><a href="#"><img class="icon"
+                                    src="../static/icons/drop-down-arrow.png" alt=""><img class="icon"
+                                    src="../static/icons/red-folder.png" alt="">bio</a></div>
+                        <!-- <li class="explorer-item"><a href="#"><img class="icon" src="about-me-icon/file-icon.png" alt="">high-school</a></li>
+                        <li class="explorer-item"><a href=""><img class="icon" src="about-me-icon/file-icon.png" alt="">university</a></li> -->
+                    </ul>
+                    <ul onclick="toggleItems(this)">
+                        <div class="explorer-item"><a href="#"><img onclick="hideMenu()" class="icon"
+                                    src="../static/icons/drop-down-arrow.png" alt=""><img class="icon"
+                                    src="../static/icons/green-folder.png" alt="">interests</a></div>
+                        <!-- <li class="explorer-item"><a href=""><img class="icon" src="about-me-icon/file-icon.png" alt="">high-school</a></li>
+                        <li class="explorer-item"><a href=""><img class="icon" src="about-me-icon/file-icon.png" alt="">university</a></li> -->
+                    </ul>
+                    <ul onclick="toggleItems(this)">
+                        <div class="explorer-item"><a href="#"><img onclick="hideMenu()" id="icon1" class="icon"
+                                    src="../static/icons/drop-down-arrow.png" alt=""><img class="icon"
+                                    src="../static/icons/blue-folder.png" alt="">education</a></div>
+                        <li class="explorer-item"><a href=""><img class="icon" src="../static/icons/file-icon.png"
+                                    alt="">high-school</a></li>
+                        <li class="explorer-item"><a href=""><img class="icon" src="../static/icons/file-icon.png"
+                                    alt="">university</a></li>
+                    </ul>
+                </div>
+                <div style="padding: 8px 15px;" class="menu-container" id="contacts-container"><img class="icon"
+                        src="../static/icons/drop-menu-icon.png" alt="">contacts</div>
+                <div id="contacts-info" class="menu-container" style="box-sizing: border-box;">
+                    <a href="#" style="text-decoration: underline;" data-copy="nguyendangphuc2611@gmail.com"
+                        class="explorer-item" id="gmail-container" onclick="alert('Email copied to clipboard!')">
+                        <img class="icon" style="height: fit-content; width: fit-content;"
+                            src="../static/icons/mail-icon.png" alt="">
+                        <div id="long-email">nguyendangphuc2611</div>
+                        <div id="short-email">email</div>
+                    </a>
+                    <div class="explorer-item">
+                        <img class="icon" src="../static/icons/phone-icon.png" alt="">
+                        <span>0968987278</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="content-container">
+        <header id="small-header">
+            <div id="left-header">
+                <div class="header-items-container" id="name">
+                    <div style="margin-right: 10vw ;" class="header-text">nguyen-dang-phuc</div>
+                </div>
+            </div>
+            <div id="right-header">
+                <a href="" class="header-items-container" id="contact-me">
+                    <div class="header-text">_contact-me</div>
+                </a>
+                <button id="header-btn" class="header-items-container">
+                    <img style="margin: 15px;" src="../static/icons/menu-icon.svg" alt="">
+                </button>
+            </div>
+        </header>
+        <header id="large-header">
+            <div id="left-header">
+                <a href="/" class="header-items-container" id="hello">
+                    <div class="header-text">_hello</div>
+                </a>
+                <a href="" class="header-items-container" id="about-me">
+                    <div class="header-text">_about-me</div>
+                </a>
+                <a href="../projects/" class="header-items-container" id="projects">
+                    <div class="header-text">_projects</div>
+                </a>
+            </div>
+            <div id="right-header">
+                <a href="/contact-me/" style="border-bottom: #FEA55F solid 3px;" class="header-items-container"
+                    id="contact-me">
+                    <div class="header-text">_contact-me</div>
+                </a>
+                <button id="header-btn" class="header-items-container">
+                    <img src="../static/icons/menu-icon.svg" alt="">
+                </button>
+            </div>
+        </header>
+        <div id="tabs-container">
+            <div id="mobile-explore-menu">
+                <div style="padding: 20px 7vw;">
+                    _about-me
+                </div>
+                <div id="mobile-explore-folder">
+                    <div style="width: 100%;">
+                        <div id="mobile-personal-info-container" onclick="toggleRotation()"
+                            style="padding: 0%; padding-left: 7vw; white-space: nowrap; background-color: #1E2D3D; width: 100%;">
+                            <a href="#">
+                                <img style="transition: 0.3 ease;" onclick="toggleRotation()" class="icon"
+                                    src="../static/icons/drop-menu-icon.png" alt="">personal-info
+                            </a>
+                        </div>
+
+                        <div style="margin-left: 7vw;" id="mobile-folder-container">
+                            <ul onclick="toggleItems(this)">
+                                <div class="explorer-item"><a href="#"><img class="icon"
+                                            src="../static/icons/drop-down-arrow.png" alt=""><img class="icon"
+                                            src="../static/icons/red-folder.png" alt="">bio</a></div>
+                                <!-- <li class="explorer-item"><a href="#"><img class="icon" src="about-me-icon/file-icon.png" alt="">high-school</a></li>
+                        <li class="explorer-item"><a href=""><img class="icon" src="about-me-icon/file-icon.png" alt="">university</a></li> -->
+                            </ul>
+                            <ul onclick="toggleItems(this)">
+                                <div class="explorer-item"><a href="#"><img onclick="hideMenu()" class="icon"
+                                            src="../static/icons/drop-down-arrow.png" alt=""><img class="icon"
+                                            src="../static/icons/green-folder.png" alt="">interests</a></div>
+                                <!-- <li class="explorer-item"><a href=""><img class="icon" src="about-me-icon/file-icon.png" alt="">high-school</a></li>
+                        <li class="explorer-item"><a href=""><img class="icon" src="about-me-icon/file-icon.png" alt="">university</a></li> -->
+                            </ul>
+                            <ul onclick="toggleItems(this)">
+                                <div class="explorer-item"><a href="#"><img onclick="hideMenu()" id="icon1" class="icon"
+                                            src="../static/icons/drop-down-arrow.png" alt=""><img class="icon"
+                                            src="../static/icons/blue-folder.png" alt="">education</a>
+                                </div>
+                                <li class="explorer-item"><a href=""><img class="icon"
+                                            src="../static/icons/file-icon.png" alt="">high-school</a></li>
+                                <li class="explorer-item"><a href=""><img class="icon"
+                                            src="../static/icons/file-icon.png" alt="">university</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div style="width: 100%;">
+                        <div id="mobile-contacts-container" onclick="toggleRotation()"
+                            style="padding: 0%; padding-left: 7vw; white-space: nowrap; background-color: #1E2D3D; width: 100%;">
+                            <a href="#">
+                                <img style="transition: 0.3 ease;" onclick="toggleRotation()" class="icon"
+                                    src="../static/icons/drop-menu-icon.png" alt="">contacts
+                            </a>
+                        </div>
+
+                        <div id="mobile-contact-info" style="box-sizing: border-box;">
+                            <a href="#" style="text-decoration: underline;" data-copy="nguyendangphuc2611@gmail.com"
+                                class="explorer-item" id="gmail-container"
+                                onclick="alert('Email copied to clipboard!')">
+                                <img class="icon" style="height: fit-content; width: fit-content;"
+                                    src="../static/icons/mail-icon.png" alt="">
+                                <div id="long-email">nguyendangphuc2611</div>
+                                <div id="short-email">email</div>
+                            </a>
+                            <div class="explorer-item">
+                                <img class="icon" src="../static/icons/phone-icon.png" alt="">
+                                <span>0968987278</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="left-tabs-container" class="tabs-container">
+                <div class="tab-editor">
+                    <div
+                        style="display: flex; align-items: center; height: 100%; border-right: solid var(--border-color) 0.5px; padding: 5px 10px;">
+                        <p style="margin-right: 50px;">contacts</p>
+                        <button style="display: flex; align-items: center;">
+                            <img src="/static/icons/close-icon.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div id="tab-display" style="display: flex; justify-content: center; padding-top: 100px;">
+                    <form id="contact-form" action="">
+                        <div>_name:</div>
+                        <input class="contact-input" type="text">
+                        <div>_email:</div>
+                        <input class="contact-input" type="email">
+                        <div>_message:</div>
+                        <textarea style="width: 100%;" class="contact-input" name="" id="" rows="10"></textarea>
+                        <button id="contact-btn">submit-message</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="right-tabs-container" class="tabs-container" style="border-left: var(--border-color) solid 0.5px;">
+                <div class="tab-editor">
+
+                </div>
+                <div id="tab-display" style="width: fit-content; height: fit-content; padding-top: 100px;">
+                    <div class="code-line comment"><span class="pink-text">const</span> <span
+                            class="blue-text">button</span>
+                        <span class="pink-text">=</span>
+                        <span class="blue-text">document</span>.<span class="blue-text">querySelector</span>(<span
+                            class="orange-text">'#sendBtn'</span>);
+                    </div>
+                    <div class="code-line comment"><br></div>
+                    <div class="code-line comment"><span class="pink-text">const</span> <span
+                            class="blue-text">message</span>
+                        <span class="pink-text">=</span> {
+                    </div>
+                    <div class="code-line comment"><span class="blue-text code-indent">name</span>: <span
+                            class="orange-text">"Jonathan Davis"</span>,
+                    </div>
+                    <div class="code-line comment"><span class="blue-text code-indent">email</span>:
+                        <span class="orange-text">"jonathan-davis@gmail.com"</span>,
+                    </div>
+                    <div class="code-line comment"><span class="blue-text code-indent">message</span>: <span
+                            class="orange-text">"Hey! Just checked your
+                            website and it
+                            looks
+                            awesome! Also,
+                            I checked your articled on Medium. Lerned a few nice tips. Thanks!"</span>,
+                    </div>
+
+                    <div class="code-line comment"> <span class="blue-text code-indent">date</span>: <span
+                            class="orange-text">"Thu
+                            21 Apr"</span>
+                    </div>
+                    <div class="code-line comment">}</div>
+                    <div class="code-line comment"><br></div>
+                    <div class="code-line comment"><span class="blue-text">button</span>.<span
+                            class="blue-text">addEventListener</span>(<span class="orange-text">'click'</span>, ()
+                        <span class="pink-text">=></span> {
+                    </div>
+                    <div class="code-line comment"> <span class="blue-text code-indent">form</span>.<span
+                            class="blue-text">send</span>(<span class="blue-text">message</span>);</div>
+                    <div class="code-line comment">})</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div id="left-footer">
+            <div class="footer-items-container">
+                <div class="footer-text">find me in:</div>
+            </div>
+            <a class="footer-items-container" href="https://www.facebook.com/profile.php?id=100050729044921">
+                <div class="footer-text" style="display: flex; justify-content: center; align-items: center;">
+                    <img src="../static/icons/facebook-icon.svg" alt="">
+                </div>
+            </a>
+        </div>
+        <div id="right-footer">
+            <a class="footer-items-container" href="https://github.com/dangphuc2611">
+                <span style="display: flex; justify-content: space-between;" class="footer-text">
+                    <div>@dangphuc2611</div>
+                    <img style="margin-left: 10px;" src="../static/icons/github-icon.svg" alt="">
+                </span>
+
+            </a>
+        </div>
+    </footer>
+    <div id="overlay"></div>
+    <div id="drop-menu">
+        <div id="upper-drop-menu" style="width: 100%;">
+            <div class="menu-items-container" id="name-container">
+                <div class="menu-texts" id="menu-name">nguyen-dang-phuc</div>
+                <button id="close-btn"><img src="../static/images/Vector.png" alt="" srcset=""></button>
+            </div>
+            <a id="hello-container" class="menu-items-container" href="/">
+                <div class="menu-texts" id="menu-hello">_hello</div>
+            </a>
+            <a href="/about-me/" class="menu-items-container" id="about-me-container">
+                <div class="menu-texts" id="menu-about-me">_about-me</div>
+            </a>
+            <a href="../projects/" class="menu-items-container" id="projects-container">
+                <div class="menu-texts" id="menu-projects">_projects</div>
+            </a>
+            <a href="" class="menu-items-container" id="contact-me-container">
+                <div class="menu-texts" id="menu-contact-me">_contact-me</div>
+            </a>
+        </div>
+        <div id="footer-menu">
+            <div class="menu-items-container" id="find-me-in-container">
+                <span id="menu-find-me-in" class="menu-texts">find me in:</span>
+                <div style="height: 100%; display: flex; align-items: center;">
+                    <a id="menu-facebook-icon" href="https://www.facebook.com/profile.php?id=100050729044921"><img
+                            src="../static/icons/facebook-icon.svg" alt=""></a>
+                    <a id="menu-github-icon" href="https://github.com/dangphuc2611"><img
+                            src="../static/icons/github-icon.svg" alt=""></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="aboutMe.js"></script>
+</body>
+
+</html>
