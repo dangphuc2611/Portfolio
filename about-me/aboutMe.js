@@ -82,6 +82,7 @@ const dropMenu = document.getElementById("drop-menu");
 
 // Hiển thị menu và overlay
 headerBtn.addEventListener("click", () => {
+    // alert("abc")
     overlay.classList.add("active");
     dropMenu.classList.add("active");
     document.getElementById("overlay").style.display = "block"

@@ -688,7 +688,7 @@ footer {
     /* display: none; */
   }
 
-  @media (max-width: 33.125em) {
+  @media (max-width: 76.875em) {
     .tab-editor {
       display: none;
     }
@@ -864,4 +864,13 @@ footer {
 .checkbox-wrapper-1 [type=checkbox].substituted+label {
   -webkit-user-select: none;
   user-select: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#drop-menu.active {
+  right: 0;
 }

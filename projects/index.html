@@ -110,7 +110,7 @@
         <div id="tabs-container">
             <div id="mobile-explore-menu">
                 <div style="padding: 20px 7vw;">
-                    _about-me
+                    projects
                 </div>
                 <div id="mobile-explore-folder">
                     <div style="width: 100%;">
@@ -118,59 +118,53 @@
                             style="padding: 0%; padding-left: 7vw; white-space: nowrap; background-color: #1E2D3D; width: 100%;">
                             <a href="#">
                                 <img style="transition: 0.3 ease;" onclick="toggleRotation()" class="icon"
-                                    src="../static/icons/drop-menu-icon.png" alt="">personal-info
+                                    src="../static/icons/drop-menu-icon.png" alt="">projects
                             </a>
                         </div>
-
-                        <div style="margin-left: 7vw;" id="mobile-folder-container">
-                            <ul onclick="toggleItems(this)">
-                                <div class="explorer-item"><a href="#"><img class="icon"
-                                            src="about-me-icon/drop-down-arrow.png" alt=""><img class="icon"
-                                            src="about-me-icon/red-folder.png" alt="">bio</a></div>
-                                <!-- <li class="explorer-item"><a href="#"><img class="icon" src="about-me-icon/file-icon.png" alt="">high-school</a></li>
-                        <li class="explorer-item"><a href=""><img class="icon" src="about-me-icon/file-icon.png" alt="">university</a></li> -->
-                            </ul>
-                            <ul onclick="toggleItems(this)">
-                                <div class="explorer-item"><a href="#"><img onclick="hideMenu()" class="icon"
-                                            src="about-me-icon/drop-down-arrow.png" alt=""><img class="icon"
-                                            src="about-me-icon/green-folder.png" alt="">interests</a></div>
-                                <!-- <li class="explorer-item"><a href=""><img class="icon" src="about-me-icon/file-icon.png" alt="">high-school</a></li>
-                        <li class="explorer-item"><a href=""><img class="icon" src="about-me-icon/file-icon.png" alt="">university</a></li> -->
-                            </ul>
-                            <ul onclick="toggleItems(this)">
-                                <div class="explorer-item"><a href="#"><img onclick="hideMenu()" id="icon1" class="icon"
-                                            src="about-me-icon/drop-down-arrow.png" alt=""><img class="icon"
-                                            src="about-me-icon/blue-folder.png" alt="">education</a>
-                                </div>
-                                <li class="explorer-item"><a href=""><img class="icon" src="about-me-icon/file-icon.png"
-                                            alt="">high-school</a></li>
-                                <li class="explorer-item"><a href=""><img class="icon" src="about-me-icon/file-icon.png"
-                                            alt="">university</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div style="width: 100%;">
-                        <div id="mobile-contacts-container" onclick="toggleRotation()"
-                            style="padding: 0%; padding-left: 7vw; white-space: nowrap; background-color: #1E2D3D; width: 100%;">
-                            <a href="#">
-                                <img style="transition: 0.3 ease;" onclick="toggleRotation()" class="icon"
-                                    src="../static/icons/drop-menu-icon.png" alt="">contacts
-                            </a>
-                        </div>
-
-                        <div id="mobile-contact-info" style="box-sizing: border-box;">
-                            <a href="#" style="text-decoration: underline;" data-copy="nguyendangphuc2611@gmail.com"
-                                class="explorer-item" id="gmail-container"
-                                onclick="alert('Email copied to clipboard!')">
-                                <img class="icon" style="height: fit-content; width: fit-content;"
-                                    src="../static/icons/mail-icon.png" alt="">
-                                <div id="long-email">nguyendangphuc2611</div>
-                                <div id="short-email">email</div>
-                            </a>
-                            <div class="explorer-item">
-                                <img class="icon" src="../static/icons/phone-icon.png" alt="">
-                                <span>0968987278</span>
+                        <div style="padding: 20px 7vw; width: 100%;">
+                            <div class="checkbox-wrapper-1" style="display: flex; align-items: center;">
+                                <input id="example-7" class="substituted" type="checkbox" aria-hidden="true" />
+                                <label for="example-7" style="display: flex; align-items: center;">
+                                    <img style="height: 100%; margin-right: 10px;" src="../static/icons/react-icon.svg"
+                                        alt="">React
+                                </label>
                             </div>
+                            <div class="checkbox-wrapper-1" style="display: flex; align-items: center;">
+                                <input id="example-8" class="substituted" type="checkbox" aria-hidden="true" />
+                                <label for="example-8" style="display: flex; align-items: center;">
+                                    <img style="height: 100%; margin-right: 10px;" src="../static/icons/html-icon.svg"
+                                        alt="">HTML
+                                </label>
+                            </div>
+                            <div class="checkbox-wrapper-1" style="display: flex; align-items: center;">
+                                <input id="example-9" class="substituted" type="checkbox" aria-hidden="true" />
+                                <label for="example-9" style="display: flex; align-items: center;">
+                                    <img style="height: 100%; margin-right: 10px;" src="../static/icons/css-icon.svg"
+                                        alt="">CSS
+                                </label>
+                            </div>
+                            <div class="checkbox-wrapper-1" style="display: flex; align-items: center;">
+                                <input id="example-10" class="substituted" type="checkbox" aria-hidden="true" />
+                                <label for="example-10" style="display: flex; align-items: center;">
+                                    <img style="height: 100%; margin-right: 10px;" src="../static/icons/js-icon.svg"
+                                        alt="">JS
+                                </label>
+                            </div>
+                            <div class="checkbox-wrapper-1" style="display: flex; align-items: center;">
+                                <input id="example-11" class="substituted" type="checkbox" aria-hidden="true" />
+                                <label for="example-11" style="display: flex; align-items: center;">
+                                    <img style="height: 100%; margin-right: 10px;" src="../static/icons/nextjs-icon.svg"
+                                        alt="">NextJS
+                                </label>
+                            </div>
+                            <div class="checkbox-wrapper-1" style="display: flex; align-items: center;">
+                                <input id="example-12" class="substituted" type="checkbox" aria-hidden="true" />
+                                <label for="example-12" style="display: flex; align-items: center;">
+                                    <img style="height: 100%; margin-right: 10px;"
+                                        src="../static/icons/angular-icon.svg" alt="">Angular
+                                </label>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -179,7 +173,7 @@
                 <div class="tab-editor">
                     <div
                         style="display: flex; align-items: center; height: 100%; border-right: solid var(--border-color) 0.5px; padding: 5px 10px;">
-                        <p style="margin-right: 50px;">personal-info</p>
+                        <p style="margin-right: 50px;">projects</p>
                         <button style="display: flex; align-items: center;">
                             <img src="/static/icons/close-icon.png" alt="">
                         </button>
@@ -338,7 +332,7 @@
             </div>
         </div>
     </div>
-    <script src="aboutMe.js"></script>
+    <!-- <script src="../about-me/aboutMe.js"></script> -->
     <script src="project.js"></script>
 </body>
 
