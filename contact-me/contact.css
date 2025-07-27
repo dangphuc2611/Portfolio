@@ -219,6 +219,7 @@ header {
 }
 
 .contact-input {
+    font-family: "Fira Code", monospace;
     width: 100%;
     background-color: #011221;
     border: var(--border-color) solid 1px;
@@ -630,7 +631,7 @@ footer {
     }
 
     #mobile-personal-info-container,
-    #mobile-contacts-container {
+    #mobile-contacts-container, #mobile-find-me-container {
         margin: 2px;
     }
 
@@ -642,9 +643,14 @@ footer {
         width: 100%;
         padding-left: 7vw;
     }
+    #mobile-find-me-info {
+        width: 100%;
+        padding-left: 7vw;
+    }
 
     #mobile-contact-info,
-    #mobile-folder-container {
+    #mobile-folder-container,
+    #mobile-find-me-info {
         margin: 20px 0;
     }
 

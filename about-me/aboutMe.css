@@ -196,6 +196,7 @@ header {
 }
 
 .contact-input {
+  
   width: 100%;
   background-color: #011221;
   border: var(--border-color) solid 1px;

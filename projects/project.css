@@ -713,6 +713,7 @@ footer {
 
     #tab-display {
       overflow: scroll;
+      padding: 0 10vw;
     }
 
     #mobile-contact-info {

@@ -38,10 +38,10 @@
                         <span>0968987278</span>
                     </div>
                 </div>
-                <div style="padding: 8px 15px" class="menu-container" id="contacts-container">
+                <div style="padding: 8px 15px" class="menu-container" id="find-me-container">
                     <img class="icon" src="../static/icons/drop-menu-icon.png" alt="" />find-me-also-in
                 </div>
-                <div id="contacts-info" class="menu-container" style="box-sizing: border-box">
+                <div id="find-me-info" class="menu-container" style="box-sizing: border-box">
                     <a href="https://www.linkedin.com/in/dangphuc-nguyen-18aa00375/" style="text-decoration: underline"
                         class="explorer-item" id="gmail-container">
                         <img class="icon" style="height: fit-content; width: fit-content"
@@ -97,7 +97,7 @@
                 <a href="/" class="header-items-container" id="hello">
                     <div class="header-text">_hello</div>
                 </a>
-                <a href="" class="header-items-container" id="about-me">
+                <a href="../about-me/" class="header-items-container" id="about-me">
                     <div class="header-text">_about-me</div>
                 </a>
                 <a href="../projects/" class="header-items-container" id="projects">
@@ -116,57 +116,10 @@
         </header>
         <div id="tabs-container">
             <div id="mobile-explore-menu">
-                <div style="padding: 20px 7vw">_about-me</div>
+                <div style="padding: 20px 7vw">_contact-me</div>
                 <div id="mobile-explore-folder">
                     <div style="width: 100%">
-                        <div id="mobile-personal-info-container" onclick="toggleRotation()" style="
-                  padding: 0%;
-                  padding-left: 7vw;
-                  white-space: nowrap;
-                  background-color: #1e2d3d;
-                  width: 100%;
-                ">
-                            <a href="#">
-                                <img style="transition: 0.3 ease" onclick="toggleRotation()" class="icon"
-                                    src="../static/icons/drop-menu-icon.png" alt="" />personal-info
-                            </a>
-                        </div>
 
-                        <div style="margin-left: 7vw" id="mobile-folder-container">
-                            <ul onclick="toggleItems(this)">
-                                <div class="explorer-item">
-                                    <a href="#"><img class="icon" src="../static/icons/drop-down-arrow.png"
-                                            alt="" /><img class="icon" src="../static/icons/red-folder.png"
-                                            alt="" />bio</a>
-                                </div>
-                                <!-- <li class="explorer-item"><a href="#"><img class="icon" src="about-me-icon/file-icon.png" alt="">high-school</a></li>
-                        <li class="explorer-item"><a href=""><img class="icon" src="about-me-icon/file-icon.png" alt="">university</a></li> -->
-                            </ul>
-                            <ul onclick="toggleItems(this)">
-                                <div class="explorer-item">
-                                    <a href="#"><img onclick="hideMenu()" class="icon"
-                                            src="../static/icons/drop-down-arrow.png" alt="" /><img class="icon"
-                                            src="../static/icons/green-folder.png" alt="" />interests</a>
-                                </div>
-                                <!-- <li class="explorer-item"><a href=""><img class="icon" src="about-me-icon/file-icon.png" alt="">high-school</a></li>
-                        <li class="explorer-item"><a href=""><img class="icon" src="about-me-icon/file-icon.png" alt="">university</a></li> -->
-                            </ul>
-                            <ul onclick="toggleItems(this)">
-                                <div class="explorer-item">
-                                    <a href="#"><img onclick="hideMenu()" id="icon1" class="icon"
-                                            src="../static/icons/drop-down-arrow.png" alt="" /><img class="icon"
-                                            src="../static/icons/blue-folder.png" alt="" />education</a>
-                                </div>
-                                <li class="explorer-item">
-                                    <a href=""><img class="icon" src="../static/icons/file-icon.png"
-                                            alt="" />high-school</a>
-                                </li>
-                                <li class="explorer-item">
-                                    <a href=""><img class="icon" src="../static/icons/file-icon.png"
-                                            alt="" />university</a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                     <div style="width: 100%">
                         <div id="mobile-contacts-container" onclick="toggleRotation()" style="
@@ -197,6 +150,43 @@
                             </div>
                         </div>
                     </div>
+                    <div style="width: 100%">
+                        <div id="mobile-find-me-container" onclick="toggleRotation()" style="
+                  padding: 0%;
+                  padding-left: 7vw;
+                  white-space: nowrap;
+                  background-color: #1e2d3d;
+                  width: 100%;
+                ">
+                            <a href="#">
+                                <img style="transition: 0.3 ease" onclick="toggleRotation()" class="icon"
+                                    src="../static/icons/drop-menu-icon.png" alt="" />find-me-also-in
+                            </a>
+                        </div>
+
+                        <div id="mobile-find-me-info" style="box-sizing: border-box">
+                            <a href="#" style="text-decoration: underline" class="explorer-item" id="gmail-container">
+                                <img class="icon" style="height: fit-content; width: fit-content"
+                                    src="../static/icons/link-icon.svg" alt="" />
+                                <div>Linkedin</div>
+                            </a>
+                            <a href="#" style="text-decoration: underline" class="explorer-item" id="gmail-container">
+                                <img class="icon" style="height: fit-content; width: fit-content"
+                                    src="../static/icons/link-icon.svg" alt="" />
+                                <div>Github</div>
+                            </a>
+                            <a href="#" style="text-decoration: underline" class="explorer-item" id="gmail-container">
+                                <img class="icon" style="height: fit-content; width: fit-content"
+                                    src="../static/icons/link-icon.svg" alt="" />
+                                <div>Facebook</div>
+                            </a>
+                            <a href="#" style="text-decoration: underline" class="explorer-item" id="gmail-container">
+                                <img class="icon" style="height: fit-content; width: fit-content"
+                                    src="../static/icons/link-icon.svg" alt="" />
+                                <div>X</div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="left-tabs-container" class="tabs-container">
@@ -214,14 +204,15 @@
                         </button>
                     </div>
                 </div>
-                <div id="tab-display" style="display: flex; justify-content: center; padding-top: 100px">
+                <div id="tab-display" style="display: flex; justify-content: center;">
                     <form id="contact-form" action="">
                         <div>_name:</div>
-                        <input class="contact-input" type="text" />
+                        <input id="name-input" class="contact-input" type="text" onchange="" />
                         <div>_email:</div>
-                        <input class="contact-input" type="email" />
+                        <input id="email-input" class="contact-input" type="email" />
                         <div>_message:</div>
-                        <textarea style="width: 100%" class="contact-input" name="" id="" rows="10"></textarea>
+                        <textarea id="message-input" style="width: 100%" class="contact-input" name=""
+                            rows="10"></textarea>
                         <button id="contact-btn">submit-message</button>
                     </form>
                 </div>
@@ -245,22 +236,20 @@
                     </div>
                     <div class="code-line comment">
                         <span class="blue-text code-indent">name</span>:
-                        <span class="orange-text">"Jonathan Davis"</span>,
+                        <span id="username" class="orange-text">""</span>,
                     </div>
                     <div class="code-line comment">
                         <span class="blue-text code-indent">email</span>:
-                        <span class="orange-text">"jonathan-davis@gmail.com"</span>,
+                        <span id="user-email" class="orange-text">""</span>,
                     </div>
                     <div class="code-line comment">
                         <span class="blue-text code-indent">message</span>:
-                        <span class="orange-text">"Hey! Just checked your website and it looks awesome! Also, I
-                            checked your articled on Medium. Lerned a few nice tips.
-                            Thanks!"</span>,
+                        <span id="user-message" class="orange-text">""</span>,
                     </div>
 
                     <div class="code-line comment">
                         <span class="blue-text code-indent">date</span>:
-                        <span class="orange-text">"Thu 21 Apr"</span>
+                        <span id="date-span" class="orange-text">"Thu 21 Apr"</span>
                     </div>
                     <div class="code-line comment">}</div>
                     <div class="code-line comment"><br /></div>
@@ -332,7 +321,7 @@
             </div>
         </div>
     </div>
-    <script src="../about-me/aboutMe.js"></script>
+    <script src="./contact.js"></script>
 </body>
 
 </html>
