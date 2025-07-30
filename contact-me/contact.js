@@ -95,13 +95,13 @@ headerBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
     overlay.classList.remove("active");
     dropMenu.classList.remove("active");
-     document.getElementById("overlay").style.display = "none"
+    document.getElementById("overlay").style.display = "none"
 });
 
 overlay.addEventListener("click", () => {
     overlay.classList.remove("active");
     dropMenu.classList.remove("active");
-     document.getElementById("overlay").style.display = "none"
+    document.getElementById("overlay").style.display = "none"
 });
 
 function updateInput() {
@@ -109,21 +109,21 @@ function updateInput() {
     let email = document.getElementById("email-input").value;
     let message = document.getElementById("message-input").value;
     console.log(name);
-    
+
     document.getElementById("username").textContent = `"${name}"`;
 }
 
-document.getElementById("name-input").addEventListener("input", function() {
+document.getElementById("name-input").addEventListener("input", function () {
     const nameValue = this.value;
     document.getElementById("username").textContent = `"${nameValue}"`;
 });
 
-document.getElementById("email-input").addEventListener("input", function() {
+document.getElementById("email-input").addEventListener("input", function () {
     const nameValue = this.value;
     document.getElementById("user-email").textContent = `"${nameValue}"`;
 });
 
-document.getElementById("message-input").addEventListener("input", function() {
+document.getElementById("message-input").addEventListener("input", function () {
     const nameValue = this.value;
     document.getElementById("user-message").textContent = `"${nameValue}"`;
 });

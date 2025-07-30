@@ -1,38 +1,50 @@
 async function fetchProjects() {
-      try {
+    try {
         const response = await fetch('http://localhost:1337/api/projects'); // replace with your actual API
         const result = await response.json(); // get the JSON response
         // console.log(result);
-        
+
         const projects = result.data; // access the array from result
 
         const container = document.getElementById('tab-display');
         container.innerHTML = ''; // clear previous content
 
-        projects.forEach((project) => {
-          const div = document.createElement('div');
-          div.style.border = '1px solid #ccc';
-          div.style.padding = '10px';
-          div.style.marginBottom = '10px';
-
-          div.innerHTML = `
-            <h3>${project.projectName}</h3>
-            <p><strong>Type:</strong> ${project.projectType}</p>
-            <p><strong>Description:</strong> ${project.projectDescription}</p>
-            <p><a href="${project.projectUrl}" target="_blank">View Project</a></p>
+        projects.forEach((project, idx) => {
+            const div = document.createElement('div');
+            div.className = "project-cards";
+            div.innerHTML = `
+              <div style="display: flex; align-items: center;">
+                  <p style="color: #5565E8; font-weight: bold; margin-right: 10px;">Project ${idx + 1}</p>
+                  <div>// _${project.projectName}</div>
+              </div>
+              <div class="project-content">
+                  <div style="position: relative;">
+                                <img class="project-images" src="../static/images/project-placeholder.jpg" alt="">
+                                <img style="position: absolute; top: 10px; right: 10px; padding: 5px; background-color: #1E2D3D;"
+                                    class="card-icon" src="../static/icons/${project.projectType.toLowerCase()}-icon.svg" alt="">
+                            </div>
+                  <div class="project-text-container">
+                      <div class="project-content-text">
+                          ${project.projectDescription}
+                      </div>
+                      <button class="view-project-btn" onclick="window.open('${project.projectURL}', '_blank')">
+                          view-project
+                      </button>
+                  </div>
+              </div>
           `;
 
-          container.appendChild(div);
+            container.appendChild(div);
         });
-      } catch (error) {
+    } catch (error) {
         console.error('Error fetching projects:', error);
-      }
     }
+}
 
-    // Call it
-    // fetchProjects();
+// Call it
+fetchProjects();
 
-    
+
 
 let personalInfo = document.getElementById("personal-info-container");
 let contact = document.getElementById("contacts-container");
@@ -104,11 +116,11 @@ headerBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
     overlay.classList.remove("active");
     dropMenu.classList.remove("active");
-     document.getElementById("overlay").style.display = "none"
+    document.getElementById("overlay").style.display = "none"
 });
 
 overlay.addEventListener("click", () => {
     overlay.classList.remove("active");
     dropMenu.classList.remove("active");
-     document.getElementById("overlay").style.display = "none"
+    document.getElementById("overlay").style.display = "none"
 });
