@@ -138,3 +138,22 @@ const simpleDate = formattedDate.replace(',', '');
 console.log(simpleDate);
 
 document.getElementById("date-span").textContent = simpleDate
+
+document.getElementById("contact-form").addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const name = document.getElementById("name-input").value;
+    const email = document.getElementById("email-input").value;
+    const message = document.getElementById("message-input").value;
+
+    const res = await fetch("http://localhost:1337/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+    });
+
+    if (res.ok) {
+        alert("Message sent!");
+    } else {
+        alert("Failed to send message.");
+    }
+});

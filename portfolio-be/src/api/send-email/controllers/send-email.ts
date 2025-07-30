@@ -7,7 +7,7 @@ export default {
     const { name, email, message } = ctx.request.body;
 
     await strapi.plugins['email'].services.email.send({
-      to: 'yourgmail@gmail.com',
+      to: 'nguyendangphuc2611@gmail.com',
       subject: `New Contact from ${name}`,
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
     });

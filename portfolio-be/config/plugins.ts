@@ -7,13 +7,13 @@ export default ({ env }) => ({
                 port: 465,
                 auth: {
                     user: 'phucnd2611@gmail.com',
-                    pass: 'shxr roma clxd hzbv',
+                    pass: 'ncvp itiz tjyd lnpx',
                 },
                 secure: true,
             },
             settings: {
-                defaultFrom: 'yourgmail@gmail.com',
-                defaultReplyTo: 'yourgmail@gmail.com',
+                defaultFrom: 'phucnd2611@gmail.com',
+                defaultReplyTo: 'phucnd2611@gmail.com',
             },
         },
     },
